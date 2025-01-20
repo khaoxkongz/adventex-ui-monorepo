@@ -1,0 +1,122 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Mail, MapPin, Phone } from "lucide-react"
+
+import { ContactForm } from "@/components/contact-form"
+import { Icons } from "@/components/icons"
+
+const contactInfo = [
+  {
+    icon: Mail,
+    title: "อีเมล",
+    details: ["support@adventex.co.th"],
+  },
+  {
+    icon: Phone,
+    title: "โทรศัพท์",
+    details: ["+66 64 213 0656", "+66 84 105 7598"],
+  },
+  {
+    icon: MapPin,
+    title: "ที่อยู่",
+    details: ["121/2 เลขที่ 3 ต.เวียง", "อ.เชียงแสน จ.เชียงราย 57120"],
+  },
+]
+
+const socialLinks = [
+  {
+    icon: Icons.facebook,
+    title: "Adventexeducation",
+    url: "https://facebook.com/yourusername",
+    color: "#1877F2",
+  },
+  {
+    icon: Icons.instagram,
+    title: "Adventexeducation",
+    url: "https://instagram.com/yourusername",
+    color: "#E4405F",
+  },
+  {
+    icon: Icons.line,
+    title: "Adventexeducation",
+    url: "https://line.me/ti/p/yourusername",
+    color: "#00C300",
+  },
+  {
+    icon: Icons.tiktok,
+    title: "Adventexeducation",
+    url: "https://tiktok.com/yourusername",
+    color: "#000000",
+  },
+]
+
+export default function ContactPage() {
+  return (
+    <div className="border-grid border-b">
+      <div className="container-wrapper">
+        <div className="container py-8">
+          <div className="grid gap-16 lg:grid-cols-3">
+            <div className="space-y-8">
+              {contactInfo.map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <div className="shrink-0">
+                    <div className="bg-primary/10 flex size-12 items-center justify-center rounded-full">
+                      <item.icon className="text-primary size-6" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mb-2 font-semibold">{item.title}</h3>
+                    {item.details.map((detail, i) => (
+                      <p key={i} className="text-muted-foreground">
+                        {detail}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              <div>
+                <h3 className="mb-4 font-semibold">ติดต่อเราผ่านโซเชียล</h3>
+                <div className="flex flex-col gap-4">
+                  {socialLinks.map((social, idx) => (
+                    <Link
+                      key={idx}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 rounded-lg px-4 py-2 transition-colors hover:opacity-80"
+                      style={{
+                        backgroundColor: `${social.color}15`,
+                        color: social.color,
+                      }}
+                    >
+                      <social.icon className="size-4" />
+                      <span>{social.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="mb-4 font-semibold">สแกนเพื่อติดต่อ</h3>
+                <div className="rounded-xl p-4">
+                  <Image
+                    src="/images/shared/qrcode.png"
+                    alt="QR Code"
+                    width={100}
+                    height={100}
+                    className="size-full rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-2">
+              <ContactForm className="rounded border shadow-none" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

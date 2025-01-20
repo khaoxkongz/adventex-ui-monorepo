@@ -1,11 +1,24 @@
-import { Button } from "@workspace/ui/components/button"
+import { CityHighlights } from "@/components/city-highlights"
+import { FeaturedTours } from "@/components/featured-tours"
+import { Gallery } from "@/components/gallery"
+import { HeroCarousel } from "@/components/hero-carousel"
+import { SearchDestinations } from "@/components/search-destinations"
+import { Testimonials } from "@/components/testimonials"
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
+    <div className="border-grid border-b">
+      <div className="container-wrapper">
+        <div className="container py-4 xl:py-6 2xl:py-4">
+          <div className="grid gap-8 md:gap-16 lg:gap-24">
+            <HeroCarousel />
+            <SearchDestinations />
+            <FeaturedTours />
+            <CityHighlights />
+            <Testimonials />
+            <Gallery />
+          </div>
+        </div>
       </div>
     </div>
   )

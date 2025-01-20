@@ -2,6 +2,7 @@ import js from "@eslint/js"
 import eslintConfigPrettier from "eslint-config-prettier"
 import pluginReact from "eslint-plugin-react"
 import pluginReactHooks from "eslint-plugin-react-hooks"
+import tailwind from "eslint-plugin-tailwindcss"
 import globals from "globals"
 import tseslint from "typescript-eslint"
 
@@ -16,7 +17,16 @@ export const config = [
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
+  ...tailwind.configs["flat/recommended"],
   pluginReact.configs.flat.recommended,
+  {
+    settings: {
+      tailwindcss: {
+        callees: ["cn", "cva"],
+        config: "../ui/tailwind.config.ts",
+      },
+    },
+  },
   {
     languageOptions: {
       ...pluginReact.configs.flat.recommended.languageOptions,
