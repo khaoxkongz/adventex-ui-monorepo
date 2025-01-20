@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { Analytics } from "@vercel/analytics/react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
 
@@ -17,6 +18,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     >
       <NuqsAdapter>{children}</NuqsAdapter>
       <Toaster richColors />
+      <Analytics />
     </NextThemesProvider>
   )
 }
