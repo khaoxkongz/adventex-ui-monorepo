@@ -9,7 +9,7 @@ const footerLinks = {
     { label: "ติดต่อเรา", href: "/contact" },
   ],
   tours: [
-    { label: "แพ็คเกจทั้งหมด", href: "/tours" },
+    { label: "แพ็คเกจทั้งหมด", href: "/tours/study" },
     { label: "แพ็คเกจเรียน", href: "/tours/study" },
   ],
 }

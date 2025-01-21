@@ -61,7 +61,7 @@ export const FeaturedTours = () => {
                 <span>{tour.period}</span>
               </div>
               <Button className="size-full rounded-none" asChild>
-                <Link href={`/tours/study${tour.id}`}>ดูเพิ่มเติม</Link>
+                <Link href={`/tours/study/${tour.id}`}>ดูเพิ่มเติม</Link>
               </Button>
             </CardFooter>
           </Card>
