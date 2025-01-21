@@ -69,8 +69,8 @@ export const SiteFooter = () => {
             <div>
               <h3 className="mb-4 font-semibold">บริษัท</h3>
               <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
-                  <li key={link.href}>
+                {footerLinks.company.map((link, index) => (
+                  <li key={index}>
                     <Link
                       href={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors"
@@ -85,8 +85,8 @@ export const SiteFooter = () => {
             <div>
               <h3 className="mb-4 font-semibold">แพ็คเกจ</h3>
               <ul className="space-y-3">
-                {footerLinks.tours.map((link) => (
-                  <li key={link.href}>
+                {footerLinks.tours.map((link, index) => (
+                  <li key={index}>
                     <Link
                       href={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors"
