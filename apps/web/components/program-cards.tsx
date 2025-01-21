@@ -22,9 +22,15 @@ export function ProgramCards() {
 
   const itemsPerPage = layout === "grid" ? 9 : 5
 
-  const startIndex = (currentPage - 1) * itemsPerPage
-  const endIndex = Math.min(startIndex + itemsPerPage, filteredPrograms.length)
-  const currentItems = filteredPrograms.slice(startIndex, endIndex)
+  const { currentItems } = React.useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage
+    const endIndex = Math.min(startIndex + itemsPerPage, filteredPrograms.length)
+    return {
+      currentItems: filteredPrograms.slice(startIndex, endIndex),
+      startIndex,
+      endIndex,
+    }
+  }, [currentPage, itemsPerPage, filteredPrograms])
 
   return (
     <div className="container-wrapper">
