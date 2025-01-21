@@ -7,7 +7,6 @@ import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
-import { ModeSwitcher } from "@/components/mode-switcher"
 
 export function SiteHeader() {
   return (
@@ -21,18 +20,16 @@ export function SiteHeader() {
               <CommandMenu />
             </div>
             <nav className="flex items-center gap-0.5">
-              <Button variant="outline" className="size-8 w-full rounded-lg px-0">
-                <Link
-                  href={siteConfig.links.line}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2"
-                >
+              <Button
+                variant="outline"
+                className="text-muted-foreground bg-muted/50 size-8 w-full rounded-lg text-sm font-normal shadow-none"
+                asChild
+              >
+                <Link href={siteConfig.links.line} target="_blank" rel="noreferrer">
                   <Icons.line className="size-4" />
-                  <span className="text-muted-foreground text-xs">ติดต่อเรา</span>
+                  <span className="hidden sm:inline-flex">ติดต่อ</span>
                 </Link>
               </Button>
-              <ModeSwitcher />
             </nav>
           </div>
         </div>
