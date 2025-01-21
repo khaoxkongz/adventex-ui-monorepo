@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 
+import { siteConfig } from "@/config/site"
 import { ContactForm } from "@/components/contact-form"
 import { Icons } from "@/components/icons"
 
@@ -27,25 +28,25 @@ const socialLinks = [
   {
     icon: Icons.facebook,
     title: "Adventexeducation",
-    url: "https://facebook.com/yourusername",
+    url: siteConfig.links.facebook,
     color: "#1877F2",
   },
   {
     icon: Icons.instagram,
     title: "Adventexeducation",
-    url: "https://instagram.com/yourusername",
+    url: siteConfig.links.instagram,
     color: "#E4405F",
   },
   {
     icon: Icons.line,
     title: "Adventexeducation",
-    url: "https://line.me/ti/p/yourusername",
+    url: siteConfig.links.line,
     color: "#00C300",
   },
   {
     icon: Icons.tiktok,
     title: "Adventexeducation",
-    url: "https://tiktok.com/yourusername",
+    url: siteConfig.links.tiktok,
     color: "#000000",
   },
 ]
