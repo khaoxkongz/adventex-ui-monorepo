@@ -1,5 +1,6 @@
 "use client"
 
+import * as React from "react"
 import { monthNames, seasonNames } from "@/utils/formatters"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { Filter, Plus } from "lucide-react"
@@ -24,8 +25,9 @@ import {
 import { type Month } from "@/types/program"
 import { usePrograms } from "@/hooks/use-programs"
 
-export function FilterProgram() {
-  const { filters, setFilters, applyFilters, resetFilters } = usePrograms()
+export const FilterProgram = React.memo(() => {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const { filters, setFilters, applyFilters, activeFiltersCount, resetFilters } = usePrograms()
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>, value: "min" | "max") {
     const newValue = e.target.value
@@ -37,11 +39,26 @@ export function FilterProgram() {
     }
   }
 
+  function handleApplyFilters() {
+    applyFilters()
+    setIsOpen(false)
+  }
+
+  function handleResetFilters() {
+    resetFilters()
+    setIsOpen(false)
+  }
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" className="relative">
           <Filter className="size-4" />
+          {activeFiltersCount > 0 && (
+            <span className="bg-primary text-primary-foreground absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full text-xs">
+              {activeFiltersCount}
+            </span>
+          )}
         </Button>
       </SheetTrigger>
       <SheetContent className="flex flex-col justify-between gap-4">
@@ -134,7 +151,7 @@ export function FilterProgram() {
               <AccordionContent className="text-muted-foreground pb-2">
                 <div className="space-y-4">
                   <RadioGroup
-                    defaultValue="ALL"
+                    defaultValue={filters.duration}
                     onValueChange={(value: "ALL" | "SHORT" | "LONG") => setFilters({ ...filters, duration: value })}
                   >
                     <div className="flex items-center space-x-2">
@@ -168,7 +185,7 @@ export function FilterProgram() {
               <AccordionContent className="text-muted-foreground pb-2">
                 <div className="space-y-4">
                   <RadioGroup
-                    defaultValue="ALL"
+                    defaultValue={filters.university}
                     onValueChange={(value: "ALL" | "HIT" | "HNU") => setFilters({ ...filters, university: value })}
                   >
                     <div className="flex items-center space-x-2">
@@ -218,7 +235,7 @@ export function FilterProgram() {
                 <ScrollArea className="h-[200px] pr-4">
                   <div className="space-y-4">
                     <RadioGroup
-                      defaultValue="ALL"
+                      defaultValue={filters.month}
                       onValueChange={(value: "ALL" | Month) => setFilters({ ...filters, month: value })}
                     >
                       <div className="flex items-center space-x-2">
@@ -261,7 +278,7 @@ export function FilterProgram() {
               <AccordionContent className="text-muted-foreground pb-2">
                 <div className="space-y-4">
                   <RadioGroup
-                    defaultValue="ALL"
+                    defaultValue={filters.season}
                     onValueChange={(value: "ALL" | "SPRING" | "SUMMER" | "AUTUMN" | "WINTER") =>
                       setFilters({ ...filters, season: value })
                     }
@@ -294,12 +311,13 @@ export function FilterProgram() {
         </ScrollArea>
 
         <SheetFooter className="border-t pt-4">
-          <Button variant="ghost" onClick={resetFilters}>
+          <Button variant="ghost" onClick={handleResetFilters}>
             ล้างค่าการกรอง
           </Button>
-          <Button onClick={applyFilters}>ยืนยันการกรอง</Button>
+          <Button onClick={handleApplyFilters}>ยืนยันการกรอง</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>
   )
-}
+})
+FilterProgram.displayName = "FilterProgram"

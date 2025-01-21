@@ -1,6 +1,7 @@
 "use client"
 
-import { LayoutGrid, List } from "lucide-react"
+import * as React from "react"
+import { LayoutGrid, List, X } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
@@ -11,7 +12,7 @@ import { usePrograms } from "@/hooks/use-programs"
 import { FilterProgram } from "@/components/filter-program"
 
 export function SearchFilter() {
-  const { layout, setLayout, order, setOrder, filteredPrograms } = usePrograms()
+  const { layout, setLayout, order, setOrder, filteredPrograms, resetFilters, activeFiltersCount } = usePrograms()
 
   return (
     <div className="bg-background sticky top-0 z-50 shadow">
@@ -22,7 +23,7 @@ export function SearchFilter() {
               <h2 className="text-lg font-semibold">ค้นหาแพ็คเกจ</h2>
               <p className="text-muted-foreground text-sm">พบทั้งหมด {filteredPrograms.length} ทัวร์</p>
             </div>
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="flex items-center justify-between gap-3 sm:gap-4">
               <div className="flex flex-col gap-1.5">
                 <Label className="text-muted-foreground text-sm">เรียงตาม</Label>
                 <Select value={order} onValueChange={(value: "ASC" | "DESC") => setOrder(value)}>
@@ -37,9 +38,17 @@ export function SearchFilter() {
               </div>
               <div className="flex flex-col gap-1">
                 <Label className="text-muted-foreground text-sm">กรอง</Label>
-                <FilterProgram />
+                <div className="flex flex-wrap gap-1">
+                  <FilterProgram />
+                  {activeFiltersCount > 0 && (
+                    <Button variant="outline" size="icon" onClick={resetFilters}>
+                      <X className="h-4 w-4" />
+                      <span className="sr-only">ล้างค่าการกรอง</span>
+                    </Button>
+                  )}
+                </div>
               </div>
-              <div className="flex flex-col gap-1">
+              <div className={cn("max-sm:hidden", "flex flex-col gap-1")}>
                 <Label className="text-muted-foreground text-sm">โหมด</Label>
                 <div className="flex gap-1">
                   <Button

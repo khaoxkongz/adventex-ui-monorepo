@@ -15,14 +15,9 @@ export function usePrograms() {
     maxPrice: parseAsInteger.withDefault(200000),
   }
 
-  const priceRangeUrlKeys: UrlKeys<typeof priceRange> = {
-    minPrice: "min_price",
-    maxPrice: "max_price",
-  }
+  const priceRangeUrlKeys: UrlKeys<typeof priceRange> = { minPrice: "min_price", maxPrice: "max_price" }
 
-  const [{ minPrice, maxPrice }, setPriceRange] = useQueryStates(priceRange, {
-    urlKeys: priceRangeUrlKeys,
-  })
+  const [{ minPrice, maxPrice }, setPriceRange] = useQueryStates(priceRange, { urlKeys: priceRangeUrlKeys })
 
   const [type, setType] = useQueryState<"ALL" | "STUDY" | "TRAVEL">("type", {
     defaultValue: "ALL",
@@ -66,6 +61,8 @@ export function usePrograms() {
     },
   })
 
+  const [activeFiltersCount, setActiveFiltersCount] = React.useState(0)
+
   React.useEffect(() => {
     setTempFilters({
       type,
@@ -87,15 +84,20 @@ export function usePrograms() {
   }, [])
 
   const applyFilters = React.useCallback(() => {
-    setType(tempFilters.type)
-    setduration(tempFilters.duration)
-    setUniversity(tempFilters.university)
-    setSeason(tempFilters.season)
-    setMonth(tempFilters.month)
-    setPriceRange({
-      minPrice: tempFilters.minPrice,
-      maxPrice: tempFilters.maxPrice,
-    })
+    const newType = tempFilters.type
+    const newDuration = tempFilters.duration
+    const newUniversity = tempFilters.university
+    const newSeason = tempFilters.season
+    const newMonth = tempFilters.month
+    const newMinPrice = tempFilters.minPrice
+    const newMaxPrice = tempFilters.maxPrice
+
+    setType(newType)
+    setduration(newDuration)
+    setUniversity(newUniversity)
+    setSeason(newSeason)
+    setMonth(newMonth)
+    setPriceRange({ minPrice: newMinPrice, maxPrice: newMaxPrice })
     setCurrentPage(1)
   }, [tempFilters, setType, setduration, setUniversity, setSeason, setMonth, setPriceRange, setCurrentPage])
 
@@ -128,6 +130,20 @@ export function usePrograms() {
     setFilteredPrograms(sorted)
   }, [programs, type, duration, university, season, month, maxPrice, minPrice, order])
 
+  const calculateActiveFilters = React.useCallback(() => {
+    let count = 0
+    if (duration !== "ALL") count++
+    if (university !== "ALL") count++
+    if (season !== "ALL") count++
+    if (month !== "ALL") count++
+    if (minPrice > 0 || maxPrice < 200000) count++
+    setActiveFiltersCount(count)
+  }, [duration, university, season, month, minPrice, maxPrice])
+
+  React.useEffect(() => {
+    calculateActiveFilters()
+  }, [calculateActiveFilters])
+
   return {
     layout,
     setLayout,
@@ -141,5 +157,6 @@ export function usePrograms() {
     setOrder,
     applyFilters,
     resetFilters,
+    activeFiltersCount,
   }
 }
