@@ -29,7 +29,7 @@ export function TourInfo({ tourData }: TourInfoProps) {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-muted-foreground text-sm">ราคาเข้าร่วมโครงการ</p>
-            <p className="text-3xl font-bold">{tourData.defaultPrice}.-</p>
+            <p className="text-3xl font-bold">{tourData.defaultPrice.toLocaleString()}.-</p>
           </div>
           <Button className="p-8 text-2xl">สมัครเรียน</Button>
         </div>
