@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "บริษัท แอดเวนท์เอ็กซ์ : ทัวร์ต่างประเทศ แพคเกจทัวร์ จัดกรุ๊ปส่วนตัวปี 2567",
-  url: "http://localhost:3000",
-  ogImage: "http://localhost:3000/og.jpg",
+  url: "https://adventex-ui-monorepo.vercel.app",
+  ogImage: "https://adventex-ui-monorepo.vercel.app/og.jpg",
   description:
     "แอดเวนท์เอ็กซ์ ผู้นำด้านบริการท่องเที่ยวครบวงจร เชี่ยวชาญการจัดทัวร์ต่างประเทศ แพคเกจทัวร์ส่วนตัว ทั้งแบบกรุ๊ปและส่วนตัว พร้อมบริการที่พัก ตั๋วเครื่องบิน วีซ่า และกิจกรรมท่องเที่ยวที่หลากหลาย ด้วยประสบการณ์กว่า 10 ปี",
   links: {
