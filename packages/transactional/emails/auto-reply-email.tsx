@@ -17,21 +17,18 @@ import { Tailwind } from "@react-email/tailwind"
 
 const baseUrl = process.env.BASE_URL ? process.env.BASE_URL : ""
 
-interface ContactFormEmailProps {
+interface AutoReplyEmailProps {
   name: string
-  email: string
-  subject: string
-  message: string
 }
 
-export default function ContactFormEmail({ name, email, subject, message }: ContactFormEmailProps) {
+export default function AutoReplyEmail({ name }: AutoReplyEmailProps) {
   return (
     <Html lang="en">
       <Head>
-        <title>New Contact Form Submission</title>
+        <title>Thank you for contacting Adventex</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Preview>New contact form submission from {name}</Preview>
+      <Preview>Thank you for reaching out to Adventex</Preview>
       <Tailwind
         config={{
           theme: {
@@ -59,38 +56,52 @@ export default function ContactFormEmail({ name, email, subject, message }: Cont
           <Container className="mx-auto my-10 max-w-2xl p-4">
             <Section className="bg-primary-foreground rounded-t-lg p-8">
               <Img src={`${baseUrl}/favicon.ico`} width="40" height="40" alt="Adventex Logo" className="mb-4" />
-              <Heading className="text-primary text-2xl font-bold">New Contact Form Submission</Heading>
+              <Heading className="text-primary text-2xl font-bold">Thank You for Contacting Adventex</Heading>
             </Section>
             <Section className="bg-card rounded-b-lg p-8 shadow-xl">
-              <Text className="text-foreground mb-6">Hello Adventex Team,</Text>
+              <Text className="text-foreground mb-6">Dear {name},</Text>
               <Text className="text-foreground mb-6">
-                You have received a new message from the contact form on your website. Here are the details:
+                Thank you for reaching out to Adventex. We have received your message and appreciate your interest in
+                our services.
+              </Text>
+              <Text className="text-foreground mb-6">
+                Our team is reviewing your inquiry and will get back to you as soon as possible. We strive to respond to
+                all messages within 24-48 business hours.
               </Text>
               <Section className="bg-accent mb-6 rounded-lg p-6">
-                <Text className="text-accent-foreground mb-2 font-semibold">Name:</Text>
-                <Text className="text-accent-foreground mb-4">{name}</Text>
-                <Text className="text-accent-foreground mb-2 font-semibold">Email:</Text>
-                <Text className="text-accent-foreground mb-4">{email}</Text>
-                <Text className="text-accent-foreground mb-2 font-semibold">Subject:</Text>
-                <Text className="text-accent-foreground mb-4">{subject}</Text>
-                <Text className="text-accent-foreground mb-2 font-semibold">Message:</Text>
-                <Text className="text-accent-foreground mb-4 whitespace-pre-wrap">{message}</Text>
+                <Text className="text-accent-foreground font-semibold">
+                  While you wait, you might find these resources helpful:
+                </Text>
+                <ul className="mt-2 list-disc pl-6">
+                  <li className="text-accent-foreground">
+                    <Link href={`${baseUrl}/services`} className="text-primary hover:underline">
+                      Our Services
+                    </Link>
+                  </li>
+                  <li className="text-accent-foreground">
+                    <Link href={`${baseUrl}/faq"`} className="text-primary hover:underline">
+                      Frequently Asked Questions
+                    </Link>
+                  </li>
+                  <li className="text-accent-foreground">
+                    <Link href={`${baseUrl}/blog"`} className="text-primary hover:underline">
+                      Latest Blog Posts
+                    </Link>
+                  </li>
+                </ul>
               </Section>
               <Text className="text-foreground mb-6">
-                To respond to this inquiry, you can reply directly to this email or use the buttons below:
+                If you have any urgent matters, please don't hesitate to call us at +66 2 123 4567.
               </Text>
-              <Section className="mb-6">
-                <Button
-                  href={`mailto:${email}?subject=Re: ${encodeURIComponent(subject)}`}
-                  className="bg-primary text-primary-foreground mr-4 transform rounded-full px-6 py-3 font-bold shadow-md transition duration-300 ease-in-out hover:-translate-y-1"
-                >
-                  Reply to {name}
-                </Button>
-              </Section>
+              <Button
+                href={`${baseUrl}/contact"`}
+                className="bg-primary text-primary-foreground transform rounded-full px-6 py-3 font-bold shadow-md transition duration-300 ease-in-out hover:-translate-y-1"
+              >
+                Visit Our Website
+              </Button>
               <Hr className="border-border my-6" />
               <Text className="text-muted-foreground text-sm">
-                This email was sent from the contact form on your Adventex website. If you did not expect this message,
-                please contact your website administrator.
+                This is an automated response. Please do not reply directly to this email.
               </Text>
               <Text className="text-muted-foreground mt-4 text-sm">
                 © {new Date().getFullYear()} Adventex Co., Ltd. All rights reserved.
