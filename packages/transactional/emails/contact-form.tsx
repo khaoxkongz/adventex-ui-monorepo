@@ -22,9 +22,10 @@ interface ContactFormEmailProps {
   email: string
   subject: string
   message: string
+  submittedAt: string
 }
 
-export default function ContactFormEmail({ name, email, subject, message }: ContactFormEmailProps) {
+export default function ContactFormEmail({ name, email, subject, message, submittedAt }: ContactFormEmailProps) {
   return (
     <Html lang="en">
       <Head>
@@ -75,6 +76,8 @@ export default function ContactFormEmail({ name, email, subject, message }: Cont
                 <Text className="text-accent-foreground mb-4">{subject}</Text>
                 <Text className="text-accent-foreground mb-2 font-semibold">Message:</Text>
                 <Text className="text-accent-foreground mb-4 whitespace-pre-wrap">{message}</Text>
+                <Text className="text-accent-foreground mb-2 font-semibold">Submitted at:</Text>
+                <Text className="text-accent-foreground">{submittedAt}</Text>
               </Section>
               <Text className="text-foreground mb-6">
                 To respond to this inquiry, you can reply directly to this email or use the buttons below:
