@@ -13,6 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/card"
+import { cn } from "@workspace/ui/lib/utils"
 
 import { Program } from "@/types/program"
 import { usePrograms } from "@/hooks/use-programs"
@@ -26,9 +27,12 @@ export function ProgramCard({ program }: ProgramCardProps) {
 
   return (
     <Card
-      className={`flex justify-between ${layout === "list" ? "flex-row" : "flex-col"}`}
+      className={cn(
+        "flex justify-between overflow-hidden",
+        layout === "list" ? "flex-row" : "flex-col"
+      )}
     >
-      <div className={`relative ${layout === "list" ? "w-1/3" : "w-full"}`}>
+      <div className={cn("relative", layout === "list" ? "w-1/3" : "w-full")}>
         <Image
           src={program.coverImage || "/placeholder.svg"}
           alt={program.title}
@@ -38,7 +42,7 @@ export function ProgramCard({ program }: ProgramCardProps) {
         />
       </div>
       <div
-        className={`flex flex-col ${layout === "list" ? "w-2/3" : "w-full"}`}
+        className={cn("flex flex-col", layout === "list" ? "w-2/3" : "w-full")}
       >
         <CardHeader>
           <CardTitle className="text-primary text-xl font-bold">
@@ -50,7 +54,7 @@ export function ProgramCard({ program }: ProgramCardProps) {
           </div>
         </CardHeader>
         <CardContent className="flex-1 space-y-4">
-          <CardDescription className="line-clamp-4 text-base">
+          <CardDescription className="line-clamp-4 indent-4 text-base">
             {program.description}
           </CardDescription>
           {layout === "list" && program.highlights.length > 0 ? (
