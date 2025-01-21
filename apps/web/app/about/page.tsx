@@ -1,36 +1,6 @@
-import Image from "next/image"
-
-import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import BlurFade from "@workspace/ui/components/blur-fade"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@workspace/ui/components/card"
 
 export default function AboutPage() {
-  const teamMembers = [
-    {
-      name: "สมศรี จันทร์เด่น",
-      role: "ผู้ก่อตั้งและซีอีโอ",
-      image: "/placeholder.svg",
-      bio: "ด้วยประสบการณ์กว่า 15 ปีในอุตสาหกรรมการท่องเที่ยว สมศรีได้ก่อตั้ง Wanderlust ด้วยวิสัยทัศน์ในการสร้างประสบการณ์การท่องเที่ยวที่มีความหมาย",
-    },
-    {
-      name: "มานพ เฉิน",
-      role: "หัวหน้าฝ่ายปฏิบัติการ",
-      image: "/placeholder.svg",
-      bio: "มานพดูแลให้ทุกทริปดำเนินไปอย่างราบรื่น ตั้งแต่การวางแผนจนถึงการดำเนินการ ด้วยประสบการณ์อันยาวนานในด้านการจัดการการท่องเที่ยว",
-    },
-    {
-      name: "เอมมี่ วิลสัน",
-      role: "หัวหน้าฝ่ายจัดทัวร์",
-      image: "/placeholder.svg",
-      bio: "ความหลงใหลในการค้นพบสถานที่ซ่อนเร้นและประสบการณ์ที่แท้จริงของเอมมี่ช่วยสร้างการเดินทางที่น่าจดจำสำหรับลูกค้าของเรา",
-    },
-  ]
-
   return (
     <div className="space-y-4 xl:space-y-6 2xl:space-y-8">
       <section className="border-grid border-b">
@@ -83,40 +53,6 @@ export default function AboutPage() {
               และการสร้างโอกาสให้ผู้เรียนได้เข้าถึงประสบการณ์ใหม่ๆ
             </p>
           </BlurFade>
-        </div>
-      </section>
-
-      <section className="container-wrapper">
-        <div className="container py-4 xl:py-6 2xl:py-4">
-          <h3 className="mb-12 text-center text-3xl font-bold">
-            พบกับทีมของเรา
-          </h3>
-          <div className="grid gap-8 md:grid-cols-3">
-            {teamMembers.map((member, idx) => (
-              <BlurFade key={idx} delay={0.1 * idx}>
-                <Card className="size-full overflow-hidden">
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={600}
-                      height={800}
-                      className="size-full object-cover"
-                    />
-                  </AspectRatio>
-                  <CardContent className="p-6">
-                    <CardTitle className="mb-1 text-xl">
-                      {member.name}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground mb-4">
-                      {member.role}
-                    </CardDescription>
-                    <p className="text-muted-foreground">{member.bio}</p>
-                  </CardContent>
-                </Card>
-              </BlurFade>
-            ))}
-          </div>
         </div>
       </section>
     </div>
