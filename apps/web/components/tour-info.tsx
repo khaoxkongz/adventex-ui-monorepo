@@ -4,26 +4,10 @@ import { Activity, MapPin } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
 
+import { Program } from "@/types/program"
+
 interface TourInfoProps {
-  tourData: {
-    id: string
-    title: string
-    description: string
-    defaultPrice: number
-    location: string
-    images: string[]
-    highlights: string[]
-    about: {
-      title: string
-      items: string[]
-    }[]
-    itinerary: {
-      week: string
-      title: string
-      description: string
-      activities: string[]
-    }[]
-  }
+  tourData: Program
 }
 
 export const TourInfo = ({ tourData }: TourInfoProps) => {
