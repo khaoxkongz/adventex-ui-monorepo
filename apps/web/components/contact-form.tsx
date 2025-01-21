@@ -5,14 +5,7 @@ import Form from "next/form"
 import { AlertCircle, Check } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@workspace/ui/components/card"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 import { Textarea } from "@workspace/ui/components/textarea"
@@ -36,18 +29,14 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
     <Card className={cn("w-full", className)}>
       <CardHeader>
         <CardTitle>เราช่วยอะไรคุณได้บ้าง?</CardTitle>
-        <CardDescription>
-          ต้องการความช่วยเหลือเกี่ยวกับโครงการของคุณ? เรายินดีให้คำปรึกษา
-        </CardDescription>
+        <CardDescription>ต้องการความช่วยเหลือเกี่ยวกับโครงการของคุณ? เรายินดีให้คำปรึกษา</CardDescription>
       </CardHeader>
       <Form action={action}>
         <CardContent className="flex flex-col gap-6">
           {state.success ? (
             <div className="flex items-center gap-2 rounded bg-green-400 p-4">
               <Check className="text-muted size-4 rounded-full border" />
-              <p className="text-muted-foreground text-sm">
-                ข้อความของคุณถูกส่งเรียบร้อยแล้ว ขอบคุณครับ/ค่ะ
-              </p>
+              <p className="text-muted-foreground text-sm">ข้อความของคุณถูกส่งเรียบร้อยแล้ว ขอบคุณครับ/ค่ะ</p>
             </div>
           ) : null}
           {state.errors?.form ? (
@@ -56,14 +45,8 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               {state.errors.form}
             </p>
           ) : null}
-          <div
-            className="group/field grid gap-2"
-            data-invalid={!!state.errors?.name}
-          >
-            <Label
-              htmlFor="name"
-              className="group-data-[invalid=true]/field:text-destructive"
-            >
+          <div className="group/field grid gap-2" data-invalid={!!state.errors?.name}>
+            <Label htmlFor="name" className="group-data-[invalid=true]/field:text-destructive">
               ชื่อ <span aria-hidden="true">*</span>
             </Label>
             <Input
@@ -82,14 +65,8 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               </p>
             )}
           </div>
-          <div
-            className="group/field grid gap-2"
-            data-invalid={!!state.errors?.email}
-          >
-            <Label
-              htmlFor="email"
-              className="group-data-[invalid=true]/field:text-destructive"
-            >
+          <div className="group/field grid gap-2" data-invalid={!!state.errors?.email}>
+            <Label htmlFor="email" className="group-data-[invalid=true]/field:text-destructive">
               อีเมล <span aria-hidden="true">*</span>
             </Label>
             <Input
@@ -108,14 +85,8 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               </p>
             )}
           </div>
-          <div
-            className="group/field grid gap-2"
-            data-invalid={!!state.errors?.message}
-          >
-            <Label
-              htmlFor="message"
-              className="group-data-[invalid=true]/field:text-destructive"
-            >
+          <div className="group/field grid gap-2" data-invalid={!!state.errors?.message}>
+            <Label htmlFor="message" className="group-data-[invalid=true]/field:text-destructive">
               หัวข้อ <span aria-hidden="true">*</span>
             </Label>
             <Input
@@ -134,14 +105,8 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               </p>
             )}
           </div>
-          <div
-            className="group/field grid gap-2"
-            data-invalid={!!state.errors?.message}
-          >
-            <Label
-              htmlFor="message"
-              className="group-data-[invalid=true]/field:text-destructive"
-            >
+          <div className="group/field grid gap-2" data-invalid={!!state.errors?.message}>
+            <Label htmlFor="message" className="group-data-[invalid=true]/field:text-destructive">
               ข้อความ <span aria-hidden="true">*</span>
             </Label>
             <Textarea

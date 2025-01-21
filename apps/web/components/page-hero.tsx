@@ -21,14 +21,7 @@ const PageHero = ({
 }
 PageHero.displayName = "PageHero"
 
-const PageHeroContent = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className?: string
-}) => {
+const PageHeroContent = ({ children, className, ...props }: { children: React.ReactNode; className?: string }) => {
   return (
     <div className="overflow-hidden">
       <div className={cn("flex flex-col", className)} {...props}>
@@ -39,19 +32,9 @@ const PageHeroContent = ({
 }
 PageHeroContent.displayName = "PageHeroContent"
 
-const PageHeroItem = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className?: string
-}) => {
+const PageHeroItem = ({ children, className, ...props }: { children: React.ReactNode; className?: string }) => {
   return (
-    <div
-      className={cn("min-w-0 shrink-0 grow-0 basis-full", className)}
-      {...props}
-    >
+    <div className={cn("min-w-0 shrink-0 grow-0 basis-full", className)} {...props}>
       {children}
     </div>
   )
@@ -87,14 +70,7 @@ const PageHeroImage = ({
 }
 PageHeroImage.displayName = "PageHeroImage"
 
-const PageHeroText = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className?: string
-}) => {
+const PageHeroText = ({ children, className, ...props }: { children: React.ReactNode; className?: string }) => {
   return (
     <div className={cn("p-4", className)} {...props}>
       {children}
@@ -103,14 +79,7 @@ const PageHeroText = ({
 }
 PageHeroText.displayName = "PageHeroText"
 
-const PageHeroTitle = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className?: string
-}) => {
+const PageHeroTitle = ({ children, className, ...props }: { children: React.ReactNode; className?: string }) => {
   return (
     <h1 className={cn("mb-4 text-4xl font-bold", className)} {...props}>
       {children}
@@ -119,19 +88,9 @@ const PageHeroTitle = ({
 }
 PageHeroTitle.displayName = "PageHeroTitle"
 
-const PageHeroDescription = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className?: string
-}) => {
+const PageHeroDescription = ({ children, className, ...props }: { children: React.ReactNode; className?: string }) => {
   return (
-    <p
-      className={cn("max-w-prose pb-4 text-lg text-gray-600", className)}
-      {...props}
-    >
+    <p className={cn("max-w-prose pb-4 text-lg text-gray-600", className)} {...props}>
       {children}
     </p>
   )

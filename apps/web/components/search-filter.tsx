@@ -4,13 +4,7 @@ import { LayoutGrid, List } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@workspace/ui/components/select"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@workspace/ui/components/select"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { usePrograms } from "@/hooks/use-programs"
@@ -23,27 +17,15 @@ export function SearchFilter() {
     <div className="bg-background sticky top-0 z-50 shadow">
       <div className="container-wrapper">
         <div className="container">
-          <div
-            className={cn(
-              "flex flex-col gap-4 py-4",
-              "sm:flex-row sm:items-center sm:justify-between sm:py-6"
-            )}
-          >
+          <div className={cn("flex flex-col gap-4 py-4", "sm:flex-row sm:items-center sm:justify-between sm:py-6")}>
             <div className="flex flex-col">
               <h2 className="text-lg font-semibold">ค้นหาแพ็คเกจ</h2>
-              <p className="text-muted-foreground text-sm">
-                พบทั้งหมด {filteredPrograms.length} ทัวร์
-              </p>
+              <p className="text-muted-foreground text-sm">พบทั้งหมด {filteredPrograms.length} ทัวร์</p>
             </div>
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <div className="flex flex-col gap-1.5">
-                <Label className="text-muted-foreground text-sm">
-                  เรียงตาม
-                </Label>
-                <Select
-                  value={order}
-                  onValueChange={(value: "ASC" | "DESC") => setOrder(value)}
-                >
+                <Label className="text-muted-foreground text-sm">เรียงตาม</Label>
+                <Select value={order} onValueChange={(value: "ASC" | "DESC") => setOrder(value)}>
                   <SelectTrigger className="sm:w-[140px]">
                     <SelectValue placeholder="เรียงตาม" />
                   </SelectTrigger>
@@ -64,11 +46,7 @@ export function SearchFilter() {
                     variant="outline"
                     size="icon"
                     onClick={() => setLayout("grid")}
-                    className={
-                      layout === "grid"
-                        ? "bg-primary text-primary-foreground"
-                        : ""
-                    }
+                    className={layout === "grid" ? "bg-primary text-primary-foreground" : ""}
                   >
                     <LayoutGrid className="size-4" />
                   </Button>
@@ -76,11 +54,7 @@ export function SearchFilter() {
                     variant="outline"
                     size="icon"
                     onClick={() => setLayout("list")}
-                    className={
-                      layout === "list"
-                        ? "bg-primary text-primary-foreground"
-                        : ""
-                    }
+                    className={layout === "list" ? "bg-primary text-primary-foreground" : ""}
                   >
                     <List className="size-4" />
                   </Button>

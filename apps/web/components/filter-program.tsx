@@ -4,19 +4,12 @@ import { monthNames, seasonNames } from "@/utils/formatters"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { Filter, Plus } from "lucide-react"
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from "@workspace/ui/components/accordion"
+import { Accordion, AccordionContent, AccordionItem } from "@workspace/ui/components/accordion"
 import { Button } from "@workspace/ui/components/button"
 import { DualRangeSlider } from "@workspace/ui/components/dual-range-slider"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@workspace/ui/components/radio-group"
+import { RadioGroup, RadioGroupItem } from "@workspace/ui/components/radio-group"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 import {
   Sheet,
@@ -34,10 +27,7 @@ import { usePrograms } from "@/hooks/use-programs"
 export function FilterProgram() {
   const { filters, setFilters, applyFilters, resetFilters } = usePrograms()
 
-  function handleInputChange(
-    e: React.ChangeEvent<HTMLInputElement>,
-    value: "min" | "max"
-  ) {
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>, value: "min" | "max") {
     const newValue = e.target.value
     if (newValue === "" || /^-?\d*\.?\d*$/.test(newValue)) {
       setFilters({
@@ -57,16 +47,12 @@ export function FilterProgram() {
       <SheetContent className="flex flex-col justify-between gap-4">
         <SheetHeader>
           <SheetTitle>กรองแพ็คเกจทัวร์เรียน</SheetTitle>
-          <SheetDescription>
-            กรองแพ็คเกจเรียนตามความต้องการของคุณ
-          </SheetDescription>
+          <SheetDescription>กรองแพ็คเกจเรียนตามความต้องการของคุณ</SheetDescription>
         </SheetHeader>
 
         <ScrollArea className="flex-1">
           <div className="space-y-2">
-            <h3 className="text-left text-[15px] font-semibold leading-6">
-              ช่วงราคา
-            </h3>
+            <h3 className="text-left text-[15px] font-semibold leading-6">ช่วงราคา</h3>
             <div className="pt-4">
               <DualRangeSlider
                 min={0}
@@ -149,9 +135,7 @@ export function FilterProgram() {
                 <div className="space-y-4">
                   <RadioGroup
                     defaultValue="ALL"
-                    onValueChange={(value: "ALL" | "SHORT" | "LONG") =>
-                      setFilters({ ...filters, duration: value })
-                    }
+                    onValueChange={(value: "ALL" | "SHORT" | "LONG") => setFilters({ ...filters, duration: value })}
                   >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="ALL" id="r1" />
@@ -185,9 +169,7 @@ export function FilterProgram() {
                 <div className="space-y-4">
                   <RadioGroup
                     defaultValue="ALL"
-                    onValueChange={(value: "ALL" | "HIT" | "HNU") =>
-                      setFilters({ ...filters, university: value })
-                    }
+                    onValueChange={(value: "ALL" | "HIT" | "HNU") => setFilters({ ...filters, university: value })}
                   >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="ALL" id="radio-university-all" />
@@ -237,9 +219,7 @@ export function FilterProgram() {
                   <div className="space-y-4">
                     <RadioGroup
                       defaultValue="ALL"
-                      onValueChange={(value: "ALL" | Month) =>
-                        setFilters({ ...filters, month: value })
-                      }
+                      onValueChange={(value: "ALL" | Month) => setFilters({ ...filters, month: value })}
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="ALL" id="radio-month-all" />
@@ -252,10 +232,7 @@ export function FilterProgram() {
                       </div>
                       {Object.entries(monthNames).map(([key, value]) => (
                         <div key={key} className="flex items-center space-x-2">
-                          <RadioGroupItem
-                            value={key}
-                            id={`radio-month-${key}`}
-                          />
+                          <RadioGroupItem value={key} id={`radio-month-${key}`} />
                           <Label
                             htmlFor={`radio-month-${key}`}
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -285,9 +262,9 @@ export function FilterProgram() {
                 <div className="space-y-4">
                   <RadioGroup
                     defaultValue="ALL"
-                    onValueChange={(
-                      value: "ALL" | "SPRING" | "SUMMER" | "AUTUMN" | "WINTER"
-                    ) => setFilters({ ...filters, season: value })}
+                    onValueChange={(value: "ALL" | "SPRING" | "SUMMER" | "AUTUMN" | "WINTER") =>
+                      setFilters({ ...filters, season: value })
+                    }
                   >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="ALL" id="radio-season-all" />
@@ -300,10 +277,7 @@ export function FilterProgram() {
                     </div>
                     {Object.entries(seasonNames).map(([key, value]) => (
                       <div key={key} className="flex items-center space-x-2">
-                        <RadioGroupItem
-                          value={key}
-                          id={`radio-season-${key}`}
-                        />
+                        <RadioGroupItem value={key} id={`radio-season-${key}`} />
                         <Label
                           htmlFor={`radio-season-${key}`}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

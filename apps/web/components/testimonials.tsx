@@ -124,9 +124,7 @@ const TestimonialCard = ({ author, text }: TestimonailCardProps) => {
           <AvatarImage src={author.avatar} alt={author.name} />
         </Avatar>
         <div className="flex flex-col items-start">
-          <h3 className="text-base font-semibold leading-none">
-            {author.name}
-          </h3>
+          <h3 className="text-base font-semibold leading-none">{author.name}</h3>
           <p className="text-muted-foreground text-sm">{author.handle}</p>
         </div>
       </div>
@@ -139,38 +137,26 @@ export const Testimonials = () => {
   return (
     <section className="grid gap-4">
       <div className="flex flex-col items-center gap-4 text-center">
-        <span className="text-primary text-xl font-semibold xl:text-4xl">
-          ทำไมต้อง Adventex Education?
-        </span>
+        <span className="text-primary text-xl font-semibold xl:text-4xl">ทำไมต้อง Adventex Education?</span>
         <SparklesText
           text="ลูกค้าของเรา พูดถึงเรายังไงบ้าง"
           className="text-4xl font-normal leading-none xl:text-6xl"
         />
         <p className="text-muted-foreground max-w-prose text-lg xl:text-xl">
-          Adventex Education
-          เกิดจากความมุ่งมั่นและแรงบันดาลใจของนักศึกษาที่เคยศึกษาในมหาวิทยาลัยชั้นนำของประเทศจีน
-          เราตระหนักถึงความสำคัญของ &quot;ภาษาที่สาม&quot; ในโลกอนาคต
-          ซึ่งไม่ได้เป็นเพียงเครื่องมือในการสื่อสาร
+          Adventex Education เกิดจากความมุ่งมั่นและแรงบันดาลใจของนักศึกษาที่เคยศึกษาในมหาวิทยาลัยชั้นนำของประเทศจีน
+          เราตระหนักถึงความสำคัญของ &quot;ภาษาที่สาม&quot; ในโลกอนาคต ซึ่งไม่ได้เป็นเพียงเครื่องมือในการสื่อสาร
           แต่ยังเป็นสะพานที่เชื่อมโยงวัฒนธรรม ความรู้ และโอกาสระดับโลก
         </p>
       </div>
       <div className="relative flex size-full flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover>
           {firstRow.map((testimonail) => (
-            <TestimonialCard
-              key={testimonail.author.name}
-              author={testimonail.author}
-              text={testimonail.text}
-            />
+            <TestimonialCard key={testimonail.author.name} author={testimonail.author} text={testimonail.text} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover>
           {secondRow.map((testimonail) => (
-            <TestimonialCard
-              key={testimonail.author.name}
-              author={testimonail.author}
-              text={testimonail.text}
-            />
+            <TestimonialCard key={testimonail.author.name} author={testimonail.author} text={testimonail.text} />
           ))}
         </Marquee>
         <div className="dark:from-background pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white"></div>

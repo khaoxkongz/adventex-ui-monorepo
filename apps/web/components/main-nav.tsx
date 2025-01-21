@@ -23,29 +23,25 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
   title: string
 }
 
-const ListItem = React.forwardRef<ListItemRef, ListItemProps>(
-  ({ title, className, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              "hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
-              className
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-              {children}
-            </p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    )
-  }
-)
+const ListItem = React.forwardRef<ListItemRef, ListItemProps>(({ title, className, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">{children}</p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
 ListItem.displayName = "ListItem"
 
 export const MainNav = () => {
@@ -53,16 +49,11 @@ export const MainNav = () => {
 
   return (
     <div className="mr-4 hidden md:flex">
-      <Link
-        href="/"
-        className="mr-4 flex items-center justify-center gap-1 lg:mr-6"
-      >
+      <Link href="/" className="mr-4 flex items-center justify-center gap-1 lg:mr-6">
         <Icons.logo className="size-6 lg:size-10" />
         <div className="text-primary hidden flex-col font-bold uppercase lg:inline-flex">
           <span className="text-2xl leading-none">Adventex</span>
-          <span className="text-[8px] leading-none">
-            International Group Co., Ltd.
-          </span>
+          <span className="text-[8px] leading-none">International Group Co., Ltd.</span>
         </div>
       </Link>
       <NavigationMenu>
@@ -81,30 +72,19 @@ export const MainNav = () => {
                 <li className="row-span-3">
                   <Link href="/tours/study" legacyBehavior passHref>
                     <NavigationMenuLink className="from-muted/50 to-muted flex size-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md">
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        แพ็คเกจทั้งหมด
-                      </div>
+                      <div className="mb-2 mt-4 text-lg font-medium">แพ็คเกจทั้งหมด</div>
                       <p className="text-muted-foreground text-sm leading-tight">
-                        ค้นพบประสบการณ์การเรียนรู้และการท่องเที่ยวในประเทศจีน
-                        พร้อมแพ็คเกจที่ครอบคลุมทั้งที่พัก การเดินทาง
-                        และกิจกรรมต่างๆ
+                        ค้นพบประสบการณ์การเรียนรู้และการท่องเที่ยวในประเทศจีน พร้อมแพ็คเกจที่ครอบคลุมทั้งที่พัก
+                        การเดินทาง และกิจกรรมต่างๆ
                       </p>
                     </NavigationMenuLink>
                   </Link>
                 </li>
-                <ListItem
-                  title="แพ็คเกจเรียนระยะสั้น"
-                  href="/tours/study?duration=short"
-                >
-                  เรียนรู้ภาษาและวัฒนธรรมจีนผ่านหลักสูตรระยะสั้น 1-6 เดือน
-                  พร้อมที่พักและกิจกรรมครบครัน
+                <ListItem title="แพ็คเกจเรียนระยะสั้น" href="/tours/study?duration=short">
+                  เรียนรู้ภาษาและวัฒนธรรมจีนผ่านหลักสูตรระยะสั้น 1-6 เดือน พร้อมที่พักและกิจกรรมครบครัน
                 </ListItem>
-                <ListItem
-                  title="แพ็คเกจเรียนระยะยาว"
-                  href="/tours/study?duration=long"
-                >
-                  หลักสูตรการศึกษาระยะยาว 1-4 ปี
-                  พร้อมโอกาสฝึกงานและเรียนรู้วิถีชีวิตในประเทศจีน
+                <ListItem title="แพ็คเกจเรียนระยะยาว" href="/tours/study?duration=long">
+                  หลักสูตรการศึกษาระยะยาว 1-4 ปี พร้อมโอกาสฝึกงานและเรียนรู้วิถีชีวิตในประเทศจีน
                 </ListItem>
               </ul>
             </NavigationMenuContent>

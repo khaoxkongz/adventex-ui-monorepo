@@ -5,12 +5,7 @@ import Image from "next/image"
 import adventexHeroCover from "@/assets/images/adventex-hero-cover.png"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@workspace/ui/components/carousel"
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@workspace/ui/components/carousel"
 import ShineBorder from "@workspace/ui/components/shine-border"
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -41,21 +36,12 @@ export const HeroCarousel = () => {
 
   return (
     <section>
-      <ShineBorder
-        className="size-full border p-1"
-        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-      >
-        <Carousel
-          setApi={setApi}
-          className="relative size-full overflow-hidden rounded-lg"
-        >
+      <ShineBorder className="size-full border p-1" color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
+        <Carousel setApi={setApi} className="relative size-full overflow-hidden rounded-lg">
           <CarouselContent>
             {slides.map(({ image, alt, id }) => (
               <CarouselItem key={id}>
-                <AspectRatio
-                  ratio={3 / 1}
-                  className="size-full overflow-hidden rounded-lg"
-                >
+                <AspectRatio ratio={3 / 1} className="size-full overflow-hidden rounded-lg">
                   <Image
                     src={image}
                     alt={alt}
@@ -73,10 +59,7 @@ export const HeroCarousel = () => {
                 key={i}
                 type="button"
                 onClick={() => handleScrollTo(i)}
-                className={cn(
-                  "h-2 rounded-full transition-all",
-                  current === i ? "w-8 bg-white" : "w-2 bg-white/50"
-                )}
+                className={cn("h-2 rounded-full transition-all", current === i ? "w-8 bg-white" : "w-2 bg-white/50")}
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}

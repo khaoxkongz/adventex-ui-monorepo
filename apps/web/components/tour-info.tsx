@@ -18,9 +18,7 @@ export const TourInfo = ({ tourData }: TourInfoProps) => {
           <MapPin className="size-4" />
           <span>{tourData.location}</span>
         </div>
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-          {tourData.title}
-        </h1>
+        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">{tourData.title}</h1>
       </div>
 
       <div className="prose max-w-prose leading-7">
@@ -39,9 +37,7 @@ export const TourInfo = ({ tourData }: TourInfoProps) => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <h3 className="text-2xl font-semibold tracking-tight">
-          ราคาค่าโครงการรวม
-        </h3>
+        <h3 className="text-2xl font-semibold tracking-tight">ราคาค่าโครงการรวม</h3>
         <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
           {tourData.highlights.map((highlight, index) => (
             <li key={index} className="flex items-center gap-2">

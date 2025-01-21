@@ -23,11 +23,7 @@ export const SiteHeader = () => {
             </div>
             <nav className="flex items-center gap-0.5">
               <Button variant="ghost" size="icon" className="size-8 px-0">
-                <Link
-                  href={siteConfig.links.line}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <Link href={siteConfig.links.line} target="_blank" rel="noreferrer">
                   <Icons.line className="size-4" />
                   <span className="sr-only">Line</span>
                 </Link>

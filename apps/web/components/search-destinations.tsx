@@ -11,18 +11,8 @@ import { DateRange } from "react-day-picker"
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
 import { Label } from "@workspace/ui/components/label"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@workspace/ui/components/popover"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@workspace/ui/components/select"
+import { Popover, PopoverContent, PopoverTrigger } from "@workspace/ui/components/popover"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@workspace/ui/components/select"
 import ShineBorder from "@workspace/ui/components/shine-border"
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -66,20 +56,13 @@ export const SearchDestinations = () => {
       <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-2">
           <Label className="block text-sm font-medium">ปลายทาง</Label>
-          <Select
-            value={filters.university}
-            onValueChange={(value) =>
-              setFilters({ ...filters, university: value })
-            }
-          >
+          <Select value={filters.university} onValueChange={(value) => setFilters({ ...filters, university: value })}>
             <SelectTrigger className="w-full shadow-none">
               <SelectValue placeholder="เลือกปลายทาง" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">ทั้งหมด</SelectItem>
-              <SelectItem value="HIT">
-                Harbin Institute of Technology
-              </SelectItem>
+              <SelectItem value="HIT">Harbin Institute of Technology</SelectItem>
               <SelectItem value="HNU">Harbin Normal University</SelectItem>
             </SelectContent>
           </Select>
@@ -104,10 +87,7 @@ export const SearchDestinations = () => {
                 <Button
                   id="date"
                   variant={"outline"}
-                  className={cn(
-                    "w-full justify-start text-left font-normal",
-                    !date ? "text-muted-foreground" : ""
-                  )}
+                  className={cn("w-full justify-start text-left font-normal", !date ? "text-muted-foreground" : "")}
                 >
                   <CalendarIcon />
                   {date?.from ? (

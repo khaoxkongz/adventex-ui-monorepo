@@ -5,14 +5,7 @@ import Link from "next/link"
 import { Activity, CalendarDays, MapPin } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@workspace/ui/components/card"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { Program } from "@/types/program"
@@ -26,12 +19,7 @@ export function ProgramCard({ program }: ProgramCardProps) {
   const { layout } = usePrograms()
 
   return (
-    <Card
-      className={cn(
-        "flex justify-between overflow-hidden",
-        layout === "list" ? "flex-row" : "flex-col"
-      )}
-    >
+    <Card className={cn("flex justify-between overflow-hidden", layout === "list" ? "flex-row" : "flex-col")}>
       <div className={cn("relative", layout === "list" ? "w-1/3" : "w-full")}>
         <Image
           src={program.coverImage || "/placeholder.svg"}
@@ -41,22 +29,16 @@ export function ProgramCard({ program }: ProgramCardProps) {
           className="size-full rounded-t-lg object-cover"
         />
       </div>
-      <div
-        className={cn("flex flex-col", layout === "list" ? "w-2/3" : "w-full")}
-      >
+      <div className={cn("flex flex-col", layout === "list" ? "w-2/3" : "w-full")}>
         <CardHeader>
-          <CardTitle className="text-primary text-xl font-bold">
-            {program.title}
-          </CardTitle>
+          <CardTitle className="text-primary text-xl font-bold">{program.title}</CardTitle>
           <div className="text-muted-foreground flex items-center gap-2 text-center text-sm">
             <MapPin className="size-4" />
             <span>{program.location}</span>
           </div>
         </CardHeader>
         <CardContent className="flex-1 space-y-4">
-          <CardDescription className="line-clamp-4 indent-4 text-base">
-            {program.description}
-          </CardDescription>
+          <CardDescription className="line-clamp-4 indent-4 text-base">{program.description}</CardDescription>
           {layout === "list" && program.highlights.length > 0 ? (
             <div className="space-y-4">
               <p>ประเด็นสำคัญ:</p>
@@ -74,9 +56,7 @@ export function ProgramCard({ program }: ProgramCardProps) {
         <CardFooter className="flex items-center justify-between p-0">
           <div className="flex size-full items-center justify-center gap-2 border p-4">
             <CalendarDays className="text-muted-foreground size-4" />
-            <span className="text-muted-foreground text-sm">
-              {program.period}
-            </span>
+            <span className="text-muted-foreground text-sm">{program.period}</span>
           </div>
           <Button className="size-full rounded-none" asChild>
             <Link href={`/tours/study/${program.id}`}>ดูเพิ่มเติม</Link>

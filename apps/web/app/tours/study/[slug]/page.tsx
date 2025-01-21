@@ -6,12 +6,7 @@ import { Activity, Box, House, PanelsTopLeft } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
 import { ScrollArea, ScrollBar } from "@workspace/ui/components/scroll-area"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@workspace/ui/components/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 
 import { ImageGallery } from "@/components/image-gallery"
 import { TourInfo } from "@/components/tour-info"
@@ -20,15 +15,11 @@ interface TourStudySlugPageProps {
   params: Promise<{ slug: string }>
 }
 
-export default async function TourStudySlugPage({
-  params,
-}: TourStudySlugPageProps) {
+export default async function TourStudySlugPage({ params }: TourStudySlugPageProps) {
   const { slug } = await params
 
   const tourData = initialPrograms.find((program) => program.id === slug)
-  const universityData = initialUniversities.find(
-    (university) => university.aka === tourData?.university
-  )
+  const universityData = initialUniversities.find((university) => university.aka === tourData?.university)
 
   if (!tourData || !universityData)
     return (
@@ -57,9 +48,7 @@ export default async function TourStudySlugPage({
       <div className="container-wrapper">
         <div className="container py-8">
           <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <ImageGallery
-              images={[tourData.coverImage, ...universityData.images]}
-            />
+            <ImageGallery images={[tourData.coverImage, ...universityData.images]} />
             <TourInfo tourData={tourData} />
           </div>
 
@@ -70,36 +59,21 @@ export default async function TourStudySlugPage({
                   value="included"
                   className="border-border bg-muted overflow-hidden rounded-b-none border-x border-t py-2 data-[state=active]:z-10 data-[state=active]:shadow-none"
                 >
-                  <House
-                    className="-ms-0.5 me-1.5 opacity-60"
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+                  <House className="-ms-0.5 me-1.5 opacity-60" size={16} strokeWidth={2} aria-hidden="true" />
                   ภาพรวม
                 </TabsTrigger>
                 <TabsTrigger
                   value="itinerary"
                   className="border-border bg-muted overflow-hidden rounded-b-none border-x border-t py-2 data-[state=active]:z-10 data-[state=active]:shadow-none"
                 >
-                  <PanelsTopLeft
-                    className="-ms-0.5 me-1.5 opacity-60"
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+                  <PanelsTopLeft className="-ms-0.5 me-1.5 opacity-60" size={16} strokeWidth={2} aria-hidden="true" />
                   แผนการเรียน
                 </TabsTrigger>
                 <TabsTrigger
                   value="reviews"
                   className="border-border bg-muted overflow-hidden rounded-b-none border-x border-t py-2 data-[state=active]:z-10 data-[state=active]:shadow-none"
                 >
-                  <Box
-                    className="-ms-0.5 me-1.5 opacity-60"
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+                  <Box className="-ms-0.5 me-1.5 opacity-60" size={16} strokeWidth={2} aria-hidden="true" />
                   รีวิว
                 </TabsTrigger>
               </TabsList>
@@ -108,9 +82,7 @@ export default async function TourStudySlugPage({
 
             <TabsContent value="included">
               <div className="space-y-6">
-                <h2 className="text-3xl font-semibold tracking-tight">
-                  เกี่ยวกับมหาวิทยาลัย
-                </h2>
+                <h2 className="text-3xl font-semibold tracking-tight">เกี่ยวกับมหาวิทยาลัย</h2>
 
                 <div className="space-y-4">
                   {universityData.about.map((section, index) => (
@@ -134,25 +106,19 @@ export default async function TourStudySlugPage({
                 {tourData.itinerary.length === 0 ? (
                   <div className="py-12 text-center">
                     <p className="text-muted-foreground">
-                      ช่วงเวลาการรับสมัคร 1-2 เดือนก่อนเดินทาง
-                      วันและเวลาเดินทางสอบถามกับทางบริษัทอีกครั้ง
+                      ช่วงเวลาการรับสมัคร 1-2 เดือนก่อนเดินทาง วันและเวลาเดินทางสอบถามกับทางบริษัทอีกครั้ง
                     </p>
                   </div>
                 ) : (
                   tourData.itinerary.map((week) => (
-                    <div
-                      key={week.week}
-                      className="relative border-l-2 border-gray-200 pb-8 pl-8 last:pb-0"
-                    >
+                    <div key={week.week} className="relative border-l-2 border-gray-200 pb-8 pl-8 last:pb-0">
                       <div className="bg-primary absolute left-[-9px] top-0 size-4 rounded-full" />
                       <div className="flex flex-col gap-4">
                         <div>
                           <h3 className="font-semibold">
                             {week.week}: {week.title}
                           </h3>
-                          <p className="text-muted-foreground">
-                            {week.description}
-                          </p>
+                          <p className="text-muted-foreground">{week.description}</p>
                         </div>
                         <ul className="space-y-2">
                           {week.activities.map((activity, index) => (

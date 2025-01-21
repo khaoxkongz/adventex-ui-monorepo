@@ -11,10 +11,7 @@ export const env = createEnv({
     RESEND_API_KEY: z.string(),
   },
   onValidationError: (error: ZodError) => {
-    console.error(
-      "❌ Invalid environment variables:",
-      error.flatten().fieldErrors
-    )
+    console.error("❌ Invalid environment variables:", error.flatten().fieldErrors)
     process.exit(1)
   },
   emptyStringAsUndefined: true,

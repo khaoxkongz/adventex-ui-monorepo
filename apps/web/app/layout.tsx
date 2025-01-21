@@ -14,13 +14,7 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: [
-    "ทัวร์ต่างประเทศ",
-    "ทัวร์ส่วนตัว",
-    "ทัวร์กรุ๊ป",
-    "ทัวร์ส่วนตัว",
-    "ทัวร์ส่วนตัว",
-  ],
+  keywords: ["ทัวร์ต่างประเทศ", "ทัวร์ส่วนตัว", "ทัวร์กรุ๊ป", "ทัวร์ส่วนตัว", "ทัวร์ส่วนตัว"],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
@@ -53,13 +47,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={cn(
-          "bg-background min-h-screen font-sans antialiased",
-          fontSans.variable,
-          fontMono.variable
-        )}
-      >
+      <body className={cn("bg-background min-h-screen font-sans antialiased", fontSans.variable, fontMono.variable)}>
         <Providers>
           <div vaul-drawer-wrapper="">
             <div className="bg-background relative flex min-h-screen flex-col">

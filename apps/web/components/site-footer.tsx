@@ -44,21 +44,13 @@ export const SiteFooter = () => {
         <div className="container py-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
             <aside className="lg:col-span-2">
-              <Link
-                href="/"
-                className="text-primary mb-4 block text-xl font-bold uppercase"
-              >
+              <Link href="/" className="text-primary mb-4 block text-xl font-bold uppercase">
                 advantex international group co., ltd.
               </Link>
-              <p className="text-muted-foreground mb-6 max-w-[30ch]">
-                ทะเบียนพานิชย์เลขที่ 0575567001670
-              </p>
+              <p className="text-muted-foreground mb-6 max-w-[30ch]">ทะเบียนพานิชย์เลขที่ 0575567001670</p>
               <div className="space-y-3">
                 {contactInfo.map((item, index) => (
-                  <div
-                    key={index}
-                    className="text-muted-foreground flex items-center gap-2"
-                  >
+                  <div key={index} className="text-muted-foreground flex items-center gap-2">
                     <item.icon className="size-4" />
                     <span>{item.text}</span>
                   </div>
@@ -71,10 +63,7 @@ export const SiteFooter = () => {
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
-                    <Link
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
+                    <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
                       {link.label}
                     </Link>
                   </li>
@@ -87,10 +76,7 @@ export const SiteFooter = () => {
               <ul className="space-y-3">
                 {footerLinks.tours.map((link, index) => (
                   <li key={index}>
-                    <Link
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
+                    <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
                       {link.label}
                     </Link>
                   </li>
