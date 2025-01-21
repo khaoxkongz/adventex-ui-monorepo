@@ -1,4 +1,3 @@
-import { CityHighlights } from "@/components/city-highlights"
 import { FeaturedTours } from "@/components/featured-tours"
 import { Gallery } from "@/components/gallery"
 import { HeroCarousel } from "@/components/hero-carousel"
@@ -14,7 +13,6 @@ export default function Page() {
             <HeroCarousel />
             <SearchDestinations />
             <FeaturedTours />
-            <CityHighlights />
             <Testimonials />
             <Gallery />
           </div>
