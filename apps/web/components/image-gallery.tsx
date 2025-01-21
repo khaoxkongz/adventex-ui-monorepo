@@ -6,43 +6,25 @@ import Image from "next/image"
 import { cn } from "@workspace/ui/lib/utils"
 
 interface ImageGalleryProps {
-  tourData: {
-    id: string
-    title: string
-    description: string
-    defaultPrice: number
-    location: string
-    images: string[]
-    highlights: string[]
-    about: {
-      title: string
-      items: string[]
-    }[]
-    itinerary: {
-      week: string
-      title: string
-      description: string
-      activities: string[]
-    }[]
-  }
+  images: string[]
 }
 
-export const ImageGallery = ({ tourData }: ImageGalleryProps) => {
+export const ImageGallery = ({ images }: ImageGalleryProps) => {
   const [selectedImage, setSelectedImage] = React.useState(0)
 
   return (
     <div className="space-y-4">
       <div className="relative aspect-square overflow-hidden rounded-lg">
         <Image
-          src={tourData.images[selectedImage]!}
-          alt={tourData.title}
+          src={images[selectedImage]!}
+          alt="An image"
           width={600}
           height={400}
           className="size-full object-cover"
         />
       </div>
       <div className="grid grid-cols-4 gap-4">
-        {tourData.images.map((image, index) => (
+        {images.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
