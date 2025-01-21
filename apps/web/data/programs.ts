@@ -8,20 +8,22 @@ export const initialPrograms: Program[] = [
     description:
       "เรียนภาษาจีนกับมหาวิทยาลัย HIT พร้อมการเรียนการสอนแบบ พูด ฟัง อ่าน และเขียน พร้อมเปิดประสบการณ์เที่ยวสถานที่ดังเมืองฮาร์บิน ชมเมืองหิมะเมืองหนาว ฉลองปีใหม่กับเมืองหิมะ - แม่น้ำซงฮวาเจียง - ถนนคนเดินจงหยาง - เมืองเก่าฮาร์บิน - สวนสาธารณะดนตรี - นั่งกระเช้าข้ามแม่น้ำซงหัว - พิพิธภัณฑ์เฮยหลงเจียง",
     location: "Harbin, China ",
-    type: "short",
-    season: "winter",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "WINTER",
     university: "HIT",
-    month: 10,
     defaultPrice: 55900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "27 days",
     coverImage: "/images/tours/ADWINTER2024.png",
-    images: [
-      "/images/tours/ADWINTER2024.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 55900,
+      },
     ],
-    prices: [{ name: "Single room", price: 55900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -30,39 +32,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [
       {
@@ -142,20 +111,22 @@ export const initialPrograms: Program[] = [
     description:
       "เรียนภาษาจีนกับมหาวิทยาลัย HIT พร้อมการเรียนการสอนแบบ พูด ฟัง อ่าน และเขียน พร้อมเปิดประสบการณ์เที่ยวสถานที่ดังเมืองฮาร์บิน ชมเมืองหิมะเมืองหนาว ฉลองปีใหม่กับเมืองหิมะ - แม่น้ำซงฮวาเจียง - ถนนคนเดินจงหยาง - เมืองเก่าฮาร์บิน - สวนสาธารณะดนตรี - นั่งกระเช้าข้ามแม่น้ำซงหัว - พิพิธภัณฑ์เฮยหลงเจียง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 10,
     defaultPrice: 46900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "14 days",
     coverImage: "/images/tours/ADOCTOBERCAMP.png",
-    images: [
-      "/images/tours/ADOCTOBERCAMP.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 46900,
+      },
     ],
-    prices: [{ name: "Single room", price: 46900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -164,39 +135,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [
       {
@@ -245,20 +183,17 @@ export const initialPrograms: Program[] = [
     description:
       "โครงการเรียนต่อภาษาจีนกับ มหาวิทยาลัยเทคโนโลยีฮาร์บิน หนึ่งในมหาวิทยาลัยชั้นนำของประเทศจีน มีชื่อเสียงในด้านการวิจัยและการศึกษาในสาขาวิทยาศาสตร์และเทคโนโลยี ก่อตั้งขึ้นในปี 1920 และเป็นหนึ่งในมหาวิทยาลัยกลุ่ม C9 League ด้วยการเรียนการสอนเป็นแบบการพูด ฟัง อ่าน และการเขียน  พร้อมเปิดประสบการณ์เรียนมหาวิทยาลัยดัง Top 10 ของประเทศจีน Harbin Institute of Technology มหาวิทยาลัยชื่อดังของจีน",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 39900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "14 days",
     coverImage: "/images/tours/ADSTUDYMAR2W.png",
-    images: [
-      "/images/tours/ADSTUDYMAR2W.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
-    ],
-    prices: [{ name: "Single room", price: 39900 }],
+    rooms: [{ name: "Single room", price: 39900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -267,39 +202,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [],
   },
@@ -310,20 +212,22 @@ export const initialPrograms: Program[] = [
     description:
       "โครงการเรียนต่อภาษาจีนกับ มหาวิทยาลัยเทคโนโลยีฮาร์บิน หนึ่งในมหาวิทยาลัยชั้นนำของประเทศจีน มีชื่อเสียงในด้านการวิจัยและการศึกษาในสาขาวิทยาศาสตร์และเทคโนโลยี ก่อตั้งขึ้นในปี 1920 และเป็นหนึ่งในมหาวิทยาลัยกลุ่ม C9 League ด้วยการเรียนการสอนเป็นแบบการพูด ฟัง อ่าน และการเขียน  พร้อมเปิดประสบการณ์เรียนมหาวิทยาลัยดัง Top 10 ของประเทศจีน Harbin Institute of Technology มหาวิทยาลัยชื่อดังของจีน",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 43900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "3 สัปดาห์",
     coverImage: "/images/tours/ADSTUDYMAR3W.png",
-    images: [
-      "/images/tours/ADSTUDYMAR3W.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 43900,
+      },
     ],
-    prices: [{ name: "Single room", price: 43900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -332,39 +236,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [],
   },
@@ -375,20 +246,22 @@ export const initialPrograms: Program[] = [
     description:
       "โครงการเรียนต่อภาษาจีนกับ มหาวิทยาลัยเทคโนโลยีฮาร์บิน หนึ่งในมหาวิทยาลัยชั้นนำของประเทศจีน มีชื่อเสียงในด้านการวิจัยและการศึกษาในสาขาวิทยาศาสตร์และเทคโนโลยี ก่อตั้งขึ้นในปี 1920 และเป็นหนึ่งในมหาวิทยาลัยกลุ่ม C9 League ด้วยการเรียนการสอนเป็นแบบการพูด ฟัง อ่าน และการเขียน  พร้อมเปิดประสบการณ์เรียนมหาวิทยาลัยดัง Top 10 ของประเทศจีน Harbin Institute of Technology มหาวิทยาลัยชื่อดังของจีน",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 49900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "30 Days",
     coverImage: "/images/tours/ADSTUDYMAR1M.png",
-    images: [
-      "/images/tours/ADSTUDYMAR1M.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 49900,
+      },
     ],
-    prices: [{ name: "Single room", price: 49900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -397,39 +270,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [],
   },
@@ -440,20 +280,22 @@ export const initialPrograms: Program[] = [
     description:
       "โครงการเรียนต่อภาษาจีนกับ มหาวิทยาลัยเทคโนโลยีฮาร์บิน หนึ่งในมหาวิทยาลัยชั้นนำของประเทศจีน มีชื่อเสียงในด้านการวิจัยและการศึกษาในสาขาวิทยาศาสตร์และเทคโนโลยี ก่อตั้งขึ้นในปี 1920 และเป็นหนึ่งในมหาวิทยาลัยกลุ่ม C9 League ด้วยการเรียนการสอนเป็นแบบการพูด ฟัง อ่าน และการเขียน  พร้อมเปิดประสบการณ์เรียนมหาวิทยาลัยดัง Top 10 ของประเทศจีน Harbin Institute of Technology มหาวิทยาลัยชื่อดังของจีน",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 59900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "60 Days",
     coverImage: "/images/tours/ADSTUDYMAR2M.png",
-    images: [
-      "/images/tours/ADSTUDYMAR2M.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 59900,
+      },
     ],
-    prices: [{ name: "Single room", price: 59900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -462,39 +304,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [],
   },
@@ -505,20 +314,22 @@ export const initialPrograms: Program[] = [
     description:
       "โครงการเรียนต่อภาษาจีนกับ มหาวิทยาลัยเทคโนโลยีฮาร์บิน หนึ่งในมหาวิทยาลัยชั้นนำของประเทศจีน มีชื่อเสียงในด้านการวิจัยและการศึกษาในสาขาวิทยาศาสตร์และเทคโนโลยี ก่อตั้งขึ้นในปี 1920 และเป็นหนึ่งในมหาวิทยาลัยกลุ่ม C9 League ด้วยการเรียนการสอนเป็นแบบการพูด ฟัง อ่าน และการเขียน  พร้อมเปิดประสบการณ์เรียนมหาวิทยาลัยดัง Top 10 ของประเทศจีน Harbin Institute of Technology มหาวิทยาลัยชื่อดังของจีน",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 79900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "90 Days",
     coverImage: "/images/tours/ADSTUDYMAR3M.png",
-    images: [
-      "/images/tours/ADSTUDYMAR3M.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 79900,
+      },
     ],
-    prices: [{ name: "Single room", price: 79900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -527,39 +338,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [],
   },
@@ -570,20 +348,22 @@ export const initialPrograms: Program[] = [
     description:
       "เรียนภาษาจีนกับมหาวิทยาลัย HIT พร้อมการเรียนการสอนแบบ พูด ฟัง อ่าน และเขียน พร้อมเปิดประสบการณ์เที่ยวสถานที่ดังเมืองฮาร์บิน ชมเมืองหิมะเมืองหนาว ฉลองปีใหม่กับเมืองหิมะ - แม่น้ำซงฮวาเจียง - ถนนคนเดินจงหยาง - เมืองเก่าฮาร์บิน - สวนสาธารณะดนตรี - นั่งกระเช้าข้ามแม่น้ำซงหัว - พิพิธภัณฑ์เฮยหลงเจียง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 53900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "27 Days",
     coverImage: "/images/tours/ADJULYCAMPSTUDY_HIT.png",
-    images: [
-      "/images/tours/ADJULYCAMPSTUDY_HIT.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 53900,
+      },
     ],
-    prices: [{ name: "Single room", price: 53900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -592,39 +372,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [
       {
@@ -691,20 +438,22 @@ export const initialPrograms: Program[] = [
     description:
       "เรียนภาษาจีนกับมหาวิทยาลัย HIT พร้อมการเรียนการสอนแบบ พูด ฟัง อ่าน และเขียน พร้อมเปิดประสบการณ์เที่ยวสถานที่ดังเมืองฮาร์บิน ชมเมืองหิมะเมืองหนาว ฉลองปีใหม่กับเมืองหิมะ - แม่น้ำซงฮวาเจียง - ถนนคนเดินจงหยาง - เมืองเก่าฮาร์บิน - สวนสาธารณะดนตรี - นั่งกระเช้าข้ามแม่น้ำซงหัว - พิพิธภัณฑ์เฮยหลงเจียง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 55900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "27 Days",
     coverImage: "/images/tours/ADWINTER2025.png",
-    images: [
-      "/images/tours/ADWINTER2025.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 55900,
+      },
     ],
-    prices: [{ name: "Single room", price: 55900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -713,39 +462,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [
       {
@@ -807,20 +523,17 @@ export const initialPrograms: Program[] = [
     description:
       "Harbin Normal University มหาวิทยาลัยใจกลางเมืองฮาร์บิน เป็นมหาวิทยาลัยที่มีชื่อเสียงในฮาร์บิน ประเทศจีน มหาวิทยาลัยนี้มีบทบาทสำคัญในการผลิตครูและบุคลากรทางการศึกษาที่มีคุณภาพสูง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HNU",
-    month: 3,
     defaultPrice: 39900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "14 Days",
     coverImage: "/images/tours/ADSTUDYMAR2W2025.png",
-    images: [
-      "/images/tours/ADSTUDYMAR2W2025.png",
-      "/images/programs/HNU_UNIVERSITY_1.png",
-      "/images/programs/HNU_UNIVERSITY_2.png",
-      "/images/programs/HNU_UNIVERSITY_3.png",
-    ],
-    prices: [
+    rooms: [
       { name: "Single room", price: 39900 },
       { name: "Couple room", price: 41900 },
     ],
@@ -833,39 +546,6 @@ export const initialPrograms: Program[] = [
       "ค่าหอพัก",
       "วีซ่านักเรียน",
     ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
-    ],
     itinerary: [],
   },
   {
@@ -875,20 +555,17 @@ export const initialPrograms: Program[] = [
     description:
       "Harbin Normal University มหาวิทยาลัยใจกลางเมืองฮาร์บิน เป็นมหาวิทยาลัยที่มีชื่อเสียงในฮาร์บิน ประเทศจีน มหาวิทยาลัยนี้มีบทบาทสำคัญในการผลิตครูและบุคลากรทางการศึกษาที่มีคุณภาพสูง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HNU",
-    month: 3,
     defaultPrice: 41900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "21 Days",
     coverImage: "/images/tours/ADSTUDYMAR3W2025.png",
-    images: [
-      "/images/tours/ADSTUDYMAR3W2025.png",
-      "/images/programs/HNU_UNIVERSITY_1.png",
-      "/images/programs/HNU_UNIVERSITY_2.png",
-      "/images/programs/HNU_UNIVERSITY_3.png",
-    ],
-    prices: [
+    rooms: [
       { name: "Single room", price: 41900 },
       { name: "Couple room", price: 45900 },
     ],
@@ -901,39 +578,6 @@ export const initialPrograms: Program[] = [
       "ค่าหอพัก",
       "วีซ่านักเรียน",
     ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
-    ],
     itinerary: [],
   },
   {
@@ -943,20 +587,17 @@ export const initialPrograms: Program[] = [
     description:
       "Harbin Normal University มหาวิทยาลัยใจกลางเมืองฮาร์บิน เป็นมหาวิทยาลัยที่มีชื่อเสียงในฮาร์บิน ประเทศจีน มหาวิทยาลัยนี้มีบทบาทสำคัญในการผลิตครูและบุคลากรทางการศึกษาที่มีคุณภาพสูง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HNU",
-    month: 3,
     defaultPrice: 47900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "30 Days",
     coverImage: "/images/tours/ADSTUDYMAR1M2025.png",
-    images: [
-      "/images/tours/ADSTUDYMAR1M2025.png",
-      "/images/programs/HNU_UNIVERSITY_1.png",
-      "/images/programs/HNU_UNIVERSITY_2.png",
-      "/images/programs/HNU_UNIVERSITY_3.png",
-    ],
-    prices: [
+    rooms: [
       { name: "Single room", price: 47900 },
       { name: "Couple room", price: 50900 },
     ],
@@ -969,39 +610,6 @@ export const initialPrograms: Program[] = [
       "ค่าหอพัก",
       "วีซ่านักเรียน",
     ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
-    ],
     itinerary: [],
   },
   {
@@ -1011,20 +619,17 @@ export const initialPrograms: Program[] = [
     description:
       "Harbin Normal University มหาวิทยาลัยใจกลางเมืองฮาร์บิน เป็นมหาวิทยาลัยที่มีชื่อเสียงในฮาร์บิน ประเทศจีน มหาวิทยาลัยนี้มีบทบาทสำคัญในการผลิตครูและบุคลากรทางการศึกษาที่มีคุณภาพสูง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HNU",
-    month: 3,
     defaultPrice: 62900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "2 เดือน",
     coverImage: "/images/tours/ADSTUDYMAR2M2025.png",
-    images: [
-      "/images/tours/ADSTUDYMAR2M2025.png",
-      "/images/programs/HNU_UNIVERSITY_1.png",
-      "/images/programs/HNU_UNIVERSITY_2.png",
-      "/images/programs/HNU_UNIVERSITY_3.png",
-    ],
-    prices: [
+    rooms: [
       { name: "Single room", price: 62900 },
       { name: "Couple room", price: 65900 },
     ],
@@ -1037,39 +642,6 @@ export const initialPrograms: Program[] = [
       "ค่าหอพัก",
       "วีซ่านักเรียน",
     ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
-    ],
     itinerary: [],
   },
   {
@@ -1079,20 +651,17 @@ export const initialPrograms: Program[] = [
     description:
       "Harbin Normal University มหาวิทยาลัยใจกลางเมืองฮาร์บิน เป็นมหาวิทยาลัยที่มีชื่อเสียงในฮาร์บิน ประเทศจีน มหาวิทยาลัยนี้มีบทบาทสำคัญในการผลิตครูและบุคลากรทางการศึกษาที่มีคุณภาพสูง",
     location: "Harbin, China ",
-    type: "short",
-    season: "spring",
+    type: "STUDY",
+    duration: "SHORT",
+    season: "SPRING",
     university: "HNU",
-    month: 3,
     defaultPrice: 79900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "3 เดือน",
     coverImage: "/images/tours/ADSTUDYMAR3M2025.png",
-    images: [
-      "/images/tours/ADSTUDYMAR3M2025.png",
-      "/images/programs/HNU_UNIVERSITY_1.png",
-      "/images/programs/HNU_UNIVERSITY_2.png",
-      "/images/programs/HNU_UNIVERSITY_3.png",
-    ],
-    prices: [
+    rooms: [
       { name: "Single room", price: 79900 },
       { name: "Couple room", price: 89900 },
     ],
@@ -1105,39 +674,6 @@ export const initialPrograms: Program[] = [
       "ค่าหอพัก",
       "วีซ่านักเรียน",
     ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
-    ],
     itinerary: [],
   },
   {
@@ -1147,20 +683,17 @@ export const initialPrograms: Program[] = [
     description:
       "Harbin Normal University มหาวิทยาลัยใจกลางเมืองฮาร์บิน เป็นมหาวิทยาลัยที่มีชื่อเสียงในฮาร์บิน ประเทศจีน มหาวิทยาลัยนี้มีบทบาทสำคัญในการผลิตครูและบุคลากรทางการศึกษาที่มีคุณภาพสูง",
     location: "Harbin, China ",
-    type: "long",
-    season: "spring",
+    type: "STUDY",
+    duration: "LONG",
+    season: "SPRING",
     university: "HNU",
-    month: 3,
     defaultPrice: 149900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "1Year",
     coverImage: "/images/tours/ADSTUDY1YNORMAL.png",
-    images: [
-      "/images/tours/ADSTUDY1YNORMAL.png",
-      "/images/programs/HNU_UNIVERSITY_1.png",
-      "/images/programs/HNU_UNIVERSITY_2.png",
-      "/images/programs/HNU_UNIVERSITY_3.png",
-    ],
-    prices: [
+    rooms: [
       { name: "Single room", price: 149900 },
       { name: "Couple room", price: 179900 },
     ],
@@ -1173,39 +706,6 @@ export const initialPrograms: Program[] = [
       "ค่าหอพัก",
       "วีซ่านักเรียน",
     ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
-    ],
     itinerary: [],
   },
   {
@@ -1215,20 +715,22 @@ export const initialPrograms: Program[] = [
     description:
       "โครงการเรียนต่อภาษาจีนกับ มหาวิทยาลัยเทคโนโลยีฮาร์บิน หนึ่งในมหาวิทยาลัยชั้นนำของประเทศจีน มีชื่อเสียงในด้านการวิจัยและการศึกษาในสาขาวิทยาศาสตร์และเทคโนโลยี ก่อตั้งขึ้นในปี 1920 และเป็นหนึ่งในมหาวิทยาลัยกลุ่ม C9 League ด้วยการเรียนการสอนเป็นแบบการพูด ฟัง อ่าน และการเขียน  พร้อมเปิดประสบการณ์เรียนมหาวิทยาลัยดัง Top 10 ของประเทศจีน Harbin Institute of Technology มหาวิทยาลัยชื่อดังของจีน",
     location: "Harbin, China ",
-    type: "long",
-    season: "spring",
+    type: "STUDY",
+    duration: "LONG",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 179900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "1Year",
     coverImage: "/images/tours/ADSTUDY1YHIT.png",
-    images: [
-      "/images/tours/ADSTUDY1YHIT.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 179900,
+      },
     ],
-    prices: [{ name: "Single room", price: 179900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -1237,39 +739,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [],
   },
@@ -1280,20 +749,17 @@ export const initialPrograms: Program[] = [
     description:
       "Harbin Normal University มหาวิทยาลัยใจกลางเมืองฮาร์บิน เป็นมหาวิทยาลัยที่มีชื่อเสียงในฮาร์บิน ประเทศจีน มหาวิทยาลัยนี้มีบทบาทสำคัญในการผลิตครูและบุคลากรทางการศึกษาที่มีคุณภาพสูง",
     location: "Harbin, China ",
-    type: "long",
-    season: "spring",
+    type: "STUDY",
+    duration: "LONG",
+    season: "SPRING",
     university: "HNU",
-    month: 3,
     defaultPrice: 89900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "1 เทอมการศึกษา",
     coverImage: "/images/tours/ADSTUDY1TNORMAL.png",
-    images: [
-      "/images/tours/ADSTUDY1TNORMAL.png",
-      "/images/programs/HNU_UNIVERSITY_1.png",
-      "/images/programs/HNU_UNIVERSITY_2.png",
-      "/images/programs/HNU_UNIVERSITY_3.png",
-    ],
-    prices: [
+    rooms: [
       { name: "Single room", price: 89900 },
       { name: "Couple room", price: 109900 },
     ],
@@ -1306,39 +772,6 @@ export const initialPrograms: Program[] = [
       "ค่าหอพัก",
       "วีซ่านักเรียน",
     ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
-    ],
     itinerary: [],
   },
   {
@@ -1348,20 +781,22 @@ export const initialPrograms: Program[] = [
     description:
       "เรียนกับมหาวิทยาลัยชื่อดัง Harbin Institute of Technology !! Top 10 ของประเทศจีน พร้อมกิจกรรมเรียนวัฒนธรรมจีน มอบทั้งความรู้และประสบการณ์ประเทศจีน 🇨🇳",
     location: "Harbin, China ",
-    type: "long",
-    season: "spring",
+    type: "STUDY",
+    duration: "LONG",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 99900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "1 ปีการศึกษา",
     coverImage: "/images/tours/ADLONGTERMSTUDY1T_HIT.png",
-    images: [
-      "/images/tours/ADLONGTERMSTUDY1T_HIT.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 99900,
+      },
     ],
-    prices: [{ name: "Single room", price: 99900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -1370,39 +805,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [],
   },
@@ -1413,20 +815,22 @@ export const initialPrograms: Program[] = [
     description:
       "เรียนกับมหาวิทยาลัยชื่อดัง Harbin Institute of Technology !! Top 10 ของประเทศจีน พร้อมทัศนศึกษา 10 สถานที่ดังเมืองฮาร์บิน พร้อมกิจกรรมเรียนวัฒนธรรมจีน มอบทั้งความรู้และประสบการณ์ประเทศจีน 🇨🇳",
     location: "Harbin, China ",
-    type: "long",
-    season: "spring",
+    type: "STUDY",
+    duration: "LONG",
+    season: "SPRING",
     university: "HIT",
-    month: 3,
     defaultPrice: 99900,
+    startDate: undefined,
+    endDate: undefined,
+    availableDate: ["MARCH", "SEPTEMBER"],
     period: "21Days",
     coverImage: "/images/tours/ADSTUDYHARBIN_SUMMER21DAYS.png",
-    images: [
-      "/images/tours/ADSTUDYHARBIN_SUMMER21DAYS.png",
-      "/images/programs/HIT_UNIVERSITY_1.png",
-      "/images/programs/HIT_UNIVERSITY_2.png",
-      "/images/programs/HIT_UNIVERSITY_3.png",
+    rooms: [
+      {
+        name: "Single room",
+        price: 99900,
+      },
     ],
-    prices: [{ name: "Single room", price: 99900 }],
     highlights: [
       "ค่าตั๋วเครื่องบิน ไป - กลับ",
       "ค่าลงทะเบียนเรียน",
@@ -1435,39 +839,6 @@ export const initialPrograms: Program[] = [
       "ค่าซิมเครือข่ายในประเทศจีน",
       "ค่าหอพัก",
       "วีซ่านักเรียน",
-    ],
-    about: [
-      {
-        title: "ข้อมูลเกี่ยวกับ HIT",
-        items: [
-          "HIT ก่อตั้งขึ้นในปี 1920 โดยเริ่มต้นเป็นสภาบันการศึกษาด้านวิศวกรรมและพัฒนามาเป็นมหาวิทยาลัยที่มีชื่อเสียงระดับโลก",
-        ],
-      },
-      {
-        title: "จุดเด่นทางวิชาการ",
-        items: [
-          "HIT ได้รับการจัดอันดับในกลุ่มมหาวิทยาลัยที่มีชื่อเสียงด้านการวิจัยในจีน และเป็นหนึ่งในสมาชิกของโครงการ C9 League ซึ่งเปรียบเสมือนกลุ่ม Ivy League ของจีน",
-          "มีความโดดเด่นในด้านวิศวกรรมอวกาศ วิทยาการคอมพิวเตอร์ หุ่นยนต์ วัสดุศาสตร์ และพลังงาน",
-        ],
-      },
-      {
-        title: "วิทยาเขต",
-        items: [
-          "HIT มีวิทยาเขต 3 แห่ง: ในฮาร์บิน (หลัก), เวยไห่ และเซินเจิ้น ซึ่งแต่ละแห่งมีจุดเด่นเฉพาะตัวในการสนับสนุนการเรียนการสอนและการวิจัย",
-        ],
-      },
-      {
-        title: "ความร่วมมือระหว่างประเทศ",
-        items: [
-          "HIT มีความร่วมมือกับมหาวิทยาลัยและสถาบันวิจัยระดับโลก และยังเปิดโอกาสให้มีการแลกเปลี่ยนนักศึกษาและนักวิจัยจากทั่วโลก",
-        ],
-      },
-      {
-        title: "สิ่งแวดล้อมการเรียน",
-        items: [
-          "วิทยาเขตในฮาร์บินมีสถาปัตยกรรมที่ผสมผสานสไตล์รัสเซียและจีน พร้อมสิ่งอํานวยความสะดวกที่ทันสมัยสําหรับการศึกษาและวิจัย",
-        ],
-      },
     ],
     itinerary: [
       {

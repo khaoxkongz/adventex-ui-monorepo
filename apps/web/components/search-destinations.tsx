@@ -2,7 +2,8 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { addDays, format } from "date-fns"
+import { getMonthName } from "@/utils/formatters"
+import { format } from "date-fns"
 import { th } from "date-fns/locale"
 import { CalendarIcon, Search } from "lucide-react"
 import { DateRange } from "react-day-picker"
@@ -50,7 +51,8 @@ export const SearchDestinations = () => {
 
     if (date?.from) {
       const startMonth = date.from.getMonth() + 1
-      queryParams.append("month", startMonth.toString())
+      const monthName = getMonthName(startMonth)
+      queryParams.append("month", monthName)
     }
 
     router.push(`/tours/study?${queryParams.toString()}`)

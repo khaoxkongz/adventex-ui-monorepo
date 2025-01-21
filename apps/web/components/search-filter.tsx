@@ -17,8 +17,7 @@ import { usePrograms } from "@/hooks/use-programs"
 import { FilterProgram } from "@/components/filter-program"
 
 export function SearchFilter() {
-  const { layout, setLayout, sortBy, setSortBy, filteredPrograms } =
-    usePrograms()
+  const { layout, setLayout, order, setOrder, filteredPrograms } = usePrograms()
 
   return (
     <div className="bg-background sticky top-0 z-50 shadow">
@@ -42,15 +41,15 @@ export function SearchFilter() {
                   เรียงตาม
                 </Label>
                 <Select
-                  value={sortBy}
-                  onValueChange={(value: "price" | "month") => setSortBy(value)}
+                  value={order}
+                  onValueChange={(value: "ASC" | "DESC") => setOrder(value)}
                 >
                   <SelectTrigger className="sm:w-[140px]">
                     <SelectValue placeholder="เรียงตาม" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="price">ราคา</SelectItem>
-                    <SelectItem value="month">เดือน</SelectItem>
+                    <SelectItem value="ASC">ราคาต่ำ-สูง</SelectItem>
+                    <SelectItem value="DESC">ราคาสูง-ต่ำ</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

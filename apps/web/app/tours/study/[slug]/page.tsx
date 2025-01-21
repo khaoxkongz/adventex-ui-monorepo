@@ -1,6 +1,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { initialPrograms } from "@/data/programs"
+import { initialUniversities } from "@/data/universities"
 import { Activity, Box, House, PanelsTopLeft } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
@@ -25,8 +26,11 @@ export default async function TourStudySlugPage({
   const { slug } = await params
 
   const tourData = initialPrograms.find((program) => program.id === slug)
+  const universityData = initialUniversities.find(
+    (university) => university.aka === tourData?.university
+  )
 
-  if (!tourData)
+  if (!tourData || !universityData)
     return (
       <React.Fragment>
         <div className="border-grid border-b">
@@ -53,7 +57,9 @@ export default async function TourStudySlugPage({
       <div className="container-wrapper">
         <div className="container py-8">
           <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <ImageGallery tourData={tourData} />
+            <ImageGallery
+              images={[tourData.coverImage, ...universityData.images]}
+            />
             <TourInfo tourData={tourData} />
           </div>
 
@@ -107,7 +113,7 @@ export default async function TourStudySlugPage({
                 </h2>
 
                 <div className="space-y-4">
-                  {tourData.about.map((section, index) => (
+                  {universityData.about.map((section, index) => (
                     <div key={index} className="space-y-2">
                       <h3 className="font-medium">{section.title}:</h3>
                       <ul className="space-y-2">

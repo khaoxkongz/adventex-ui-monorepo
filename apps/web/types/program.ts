@@ -1,18 +1,31 @@
-export type LayoutType = "grid" | "list"
+export type Layout = "grid" | "list"
 
-export type ProgramType = "short" | "long"
-
-export type Season = "spring" | "summer" | "autumn" | "winter"
+export type Month =
+  | "JANUARY"
+  | "FEBRUARY"
+  | "MARCH"
+  | "APRIL"
+  | "MAY"
+  | "JUNE"
+  | "JULY"
+  | "AUGUST"
+  | "SEPTEMBER"
+  | "OCTOBER"
+  | "NOVEMBER"
+  | "DECEMBER"
 
 export interface FilterState {
-  priceRange: {
-    min: number
-    max: number
+  type: "ALL" | "STUDY" | "TRAVEL"
+  duration: "ALL" | "SHORT" | "LONG"
+  university: "ALL" | "HIT" | "HNU"
+  season: "ALL" | "SPRING" | "SUMMER" | "AUTUMN" | "WINTER"
+  month: "ALL" | Month
+  minPrice: number
+  maxPrice: number
+  sortBy: {
+    key: "price" | "duration"
+    order: "ASC" | "DESC"
   }
-  type: ProgramType | "all"
-  university: string
-  season: Season | "all"
-  month: number
 }
 
 export interface Program {
@@ -21,22 +34,20 @@ export interface Program {
   title: string
   description: string
   location: string
-  type: ProgramType
-  season: Season
+  type: "STUDY" | "TRAVEL"
+  duration: "SHORT" | "LONG"
+  season: "SPRING" | "SUMMER" | "AUTUMN" | "WINTER"
   university: "HIT" | "HNU"
-  month: number
+  startDate: string | undefined
+  endDate: string | undefined
   period: string
   coverImage: string
-  images: string[]
   highlights: string[]
+  availableDate: Month[]
   defaultPrice: number
-  prices: {
+  rooms: {
     name: string
     price: number
-  }[]
-  about: {
-    title: string
-    items: string[]
   }[]
   itinerary: {
     week: string
