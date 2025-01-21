@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { initialPrograms } from "@/data/programs"
+import { featuredPrograms } from "@/data/programs"
 import { Clock } from "lucide-react"
 
 import { Badge } from "@workspace/ui/components/badge"
@@ -20,7 +20,7 @@ export function FeaturedTours() {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {initialPrograms.splice(0, 3).map((tour) => (
+        {featuredPrograms.map((tour) => (
           <Card
             key={tour.id}
             className="group relative flex flex-col overflow-hidden rounded shadow-none transition-shadow hover:shadow-lg"
