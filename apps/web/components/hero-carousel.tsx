@@ -17,11 +17,11 @@ const slides = [
   },
 ]
 
-export const HeroCarousel = () => {
+export function HeroCarousel() {
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
 
-  const handleScrollTo = (index: number) => {
+  function handleScrollTo(index: number) {
     api?.scrollTo(index)
     setCurrent(index)
   }

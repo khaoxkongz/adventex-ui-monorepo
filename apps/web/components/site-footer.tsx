@@ -15,18 +15,9 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  {
-    icon: Icons.facebook,
-    href: "https://web.facebook.com/profile.php?id=61552757897555",
-  },
-  {
-    icon: Icons.instagram,
-    href: "https://www.instagram.com/adventexeducation/?hl=en",
-  },
-  {
-    icon: Icons.tiktok,
-    href: "https://www.tiktok.com/@harbin.pp",
-  },
+  { icon: Icons.facebook, href: "https://web.facebook.com/profile.php?id=61552757897555" },
+  { icon: Icons.instagram, href: "https://www.instagram.com/adventexeducation/?hl=en" },
+  { icon: Icons.tiktok, href: "https://www.tiktok.com/@harbin.pp" },
 ]
 
 const contactInfo = [
@@ -35,7 +26,7 @@ const contactInfo = [
   { icon: MapPin, text: "121/2 เลขที่ 3 ต.เวียง อ.เชียงแสน จ.เชียงราย 57120" },
 ]
 
-export const SiteFooter = () => {
+export function SiteFooter() {
   const currentYear = new Date().getFullYear()
 
   return (
@@ -45,7 +36,7 @@ export const SiteFooter = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
             <aside className="lg:col-span-2">
               <Link href="/" className="text-primary mb-4 block text-xl font-bold uppercase">
-                advantex international group co., ltd.
+                adventex international group co., ltd.
               </Link>
               <p className="text-muted-foreground mb-6 max-w-[30ch]">ทะเบียนพานิชย์เลขที่ 0575567001670</p>
               <div className="space-y-3">
@@ -92,7 +83,7 @@ export const SiteFooter = () => {
           <div className="container py-6">
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
               <p className="text-muted-foreground text-center text-sm sm:text-left">
-                © {currentYear} Advantex. All rights reserved.
+                © {currentYear} Adventex. All rights reserved.
               </p>
 
               <div className="flex items-center gap-4">

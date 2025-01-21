@@ -107,7 +107,7 @@ interface TestimonailCardProps {
   text: string
 }
 
-const TestimonialCard = ({ author, text }: TestimonailCardProps) => {
+function TestimonialCard({ author, text }: TestimonailCardProps) {
   return (
     <Card
       className={cn(
@@ -133,7 +133,7 @@ const TestimonialCard = ({ author, text }: TestimonailCardProps) => {
   )
 }
 
-export const Testimonials = () => {
+export function Testimonials() {
   return (
     <section className="grid gap-4">
       <div className="flex flex-col items-center gap-4 text-center">

@@ -9,7 +9,7 @@ interface ImageGalleryProps {
   images: string[]
 }
 
-export const ImageGallery = ({ images }: ImageGalleryProps) => {
+export function ImageGallery({ images }: ImageGalleryProps) {
   const [selectedImage, setSelectedImage] = React.useState(0)
 
   return (

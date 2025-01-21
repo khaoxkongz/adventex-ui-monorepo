@@ -1,4 +1,3 @@
-import * as React from "react"
 import Link from "next/link"
 
 import { Button } from "@workspace/ui/components/button"
@@ -10,7 +9,7 @@ import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
 
-export const SiteHeader = () => {
+export function SiteHeader() {
   return (
     <header className="border-grid bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="container-wrapper">
@@ -22,10 +21,15 @@ export const SiteHeader = () => {
               <CommandMenu />
             </div>
             <nav className="flex items-center gap-0.5">
-              <Button variant="ghost" size="icon" className="size-8 px-0">
-                <Link href={siteConfig.links.line} target="_blank" rel="noreferrer">
+              <Button variant="outline" className="size-8 w-full rounded-lg px-0">
+                <Link
+                  href={siteConfig.links.line}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2"
+                >
                   <Icons.line className="size-4" />
-                  <span className="sr-only">Line</span>
+                  <span className="text-muted-foreground text-xs">ติดต่อเรา</span>
                 </Link>
               </Button>
               <ModeSwitcher />

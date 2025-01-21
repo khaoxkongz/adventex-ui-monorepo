@@ -44,7 +44,7 @@ const ListItem = React.forwardRef<ListItemRef, ListItemProps>(({ title, classNam
 })
 ListItem.displayName = "ListItem"
 
-export const MainNav = () => {
+export function MainNav() {
   const pathname = usePathname()
 
   return (
@@ -80,10 +80,10 @@ export const MainNav = () => {
                     </NavigationMenuLink>
                   </Link>
                 </li>
-                <ListItem title="แพ็คเกจเรียนระยะสั้น" href="/tours/study?duration=short">
+                <ListItem title="แพ็คเกจเรียนระยะสั้น" href="/tours/study?duration=SHORT">
                   เรียนรู้ภาษาและวัฒนธรรมจีนผ่านหลักสูตรระยะสั้น 1-6 เดือน พร้อมที่พักและกิจกรรมครบครัน
                 </ListItem>
-                <ListItem title="แพ็คเกจเรียนระยะยาว" href="/tours/study?duration=long">
+                <ListItem title="แพ็คเกจเรียนระยะยาว" href="/tours/study?duration=LONG">
                   หลักสูตรการศึกษาระยะยาว 1-4 ปี พร้อมโอกาสฝึกงานและเรียนรู้วิถีชีวิตในประเทศจีน
                 </ListItem>
               </ul>

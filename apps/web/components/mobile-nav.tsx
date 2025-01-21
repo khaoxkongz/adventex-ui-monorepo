@@ -34,7 +34,7 @@ const MobileLink = ({ href, onOpenChange, className, children, ...props }: Mobil
   )
 }
 
-export const MobileNav = () => {
+export function MobileNav() {
   const [open, setOpen] = React.useState(false)
   const { setMetaColor, metaColor } = useMetaColor()
 

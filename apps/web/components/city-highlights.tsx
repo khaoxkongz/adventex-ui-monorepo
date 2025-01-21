@@ -58,7 +58,7 @@ const cities = [
   },
 ]
 
-export const CityHighlights = () => {
+export function CityHighlights() {
   return (
     <section className="grid gap-4 xl:gap-6 2xl:gap-4">
       <div className="grid items-center justify-center gap-4 text-center xl:gap-6 2xl:gap-4">

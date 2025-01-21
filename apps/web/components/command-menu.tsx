@@ -19,15 +19,15 @@ import { cn } from "@workspace/ui/lib/utils"
 
 import { docsConfig } from "@/config/docs"
 
-export const CommandMenu = ({
-  ...props
-}: {
+interface CommandMenuProps {
   children?: React.ReactNode
   open?: boolean
   defaultOpen?: boolean
   onOpenChange?(open: boolean): void
   modal?: boolean
-}) => {
+}
+
+export function CommandMenu({ ...props }: CommandMenuProps) {
   const router = useRouter()
   const [open, setOpen] = React.useState(false)
   const { setTheme } = useTheme()

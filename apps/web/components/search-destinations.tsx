@@ -16,23 +16,21 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import ShineBorder from "@workspace/ui/components/shine-border"
 import { cn } from "@workspace/ui/lib/utils"
 
-export const SearchDestinations = () => {
+export function SearchDestinations() {
   const router = useRouter()
-  const [filters, setFilters] = React.useState({
-    university: "all",
-  })
+  const [filters, setFilters] = React.useState({ university: "all" })
 
   const [date, setDate] = React.useState<DateRange | undefined>()
 
-  const handleDateSelect = (selectedDate: DateRange | undefined) => {
+  function handleDateSelect(selectedDate: DateRange | undefined) {
     setDate(selectedDate)
   }
 
-  const formatThaiDate = (date: Date) => {
+  function formatThaiDate(date: Date) {
     return format(date, "dd MMMM", { locale: th })
   }
 
-  const handleSearch = () => {
+  function handleSearch() {
     const queryParams = new URLSearchParams()
 
     if (filters.university !== "all") {

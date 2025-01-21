@@ -15,7 +15,7 @@ const images = [
   "/images/gallery/GALLERY_9.png",
 ]
 
-export const Gallery = () => {
+export function Gallery() {
   return (
     <section className="space-y-4 xl:space-y-8 2xl:space-y-12">
       <div className="flex flex-col items-center justify-center gap-4 text-center xl:gap-6 2xl:gap-4">

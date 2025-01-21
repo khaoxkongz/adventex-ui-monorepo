@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Separator } from "@workspace/ui/components/separator"
 import SparklesText from "@workspace/ui/components/sparkles-text"
 
-export const FeaturedTours = () => {
+export function FeaturedTours() {
   return (
     <section className="grid gap-4 xl:gap-6 2xl:gap-4">
       <div className="grid items-center justify-center gap-4 text-center xl:gap-6 2xl:gap-4">

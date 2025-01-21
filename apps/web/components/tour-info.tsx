@@ -10,7 +10,7 @@ interface TourInfoProps {
   tourData: Program
 }
 
-export const TourInfo = ({ tourData }: TourInfoProps) => {
+export function TourInfo({ tourData }: TourInfoProps) {
   return (
     <div className="space-y-6">
       <div>
