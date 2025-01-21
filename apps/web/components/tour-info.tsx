@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Activity, MapPin } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
@@ -31,7 +32,9 @@ export function TourInfo({ tourData }: TourInfoProps) {
             <p className="text-muted-foreground text-sm">ราคาเข้าร่วมโครงการ</p>
             <p className="text-3xl font-bold">{tourData.defaultPrice.toLocaleString()}.-</p>
           </div>
-          <Button className="p-8 text-2xl">สมัครเรียน</Button>
+          <Button className="p-8 text-2xl" asChild>
+            <Link href="/contact">สมัครเรียน</Link>
+          </Button>
         </div>
         <p className="text-muted-foreground text-sm">ราคารวมทุกอย่าง</p>
       </div>
