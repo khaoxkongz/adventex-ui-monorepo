@@ -21,7 +21,7 @@ export async function contactFormAction(_prevState: unknown, formData: FormData)
 
     const { data: emailData, error } = await resend.emails.send({
       from: "Adventex Contact Form <onboarding@resend.dev>",
-      to: "kong.thanapat1@gmail.com",
+      to: "support@adventex.co.th",
       subject: `${data.subject}`,
       react: ContactFormEmail({
         name: data.name,
@@ -81,7 +81,7 @@ export async function contactFormAction(_prevState: unknown, formData: FormData)
 async function sendAutoReply(name: string, email: string) {
   try {
     const { data, error } = await resend.emails.send({
-      from: "Adventex Support <kong.thanapat1@gmail.com>",
+      from: "Adventex Support <support@adventex.co.th>",
       to: email,
       subject: "Thank you for contacting Adventex",
       react: AutoReplyEmail({ name }),
