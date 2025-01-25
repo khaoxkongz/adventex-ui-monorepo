@@ -11,7 +11,10 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
   keywords: ["ทัวร์ต่างประเทศ", "ทัวร์ส่วนตัว", "ทัวร์กรุ๊ป", "ทัวร์ส่วนตัว", "ทัวร์ส่วนตัว"],
