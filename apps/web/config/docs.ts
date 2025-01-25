@@ -18,12 +18,12 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "แพ็คเกจเรียนระยะสั้น",
-          href: "/tours/study?type=SHORT",
+          href: "/tours/study?duration=SHORT",
           items: [],
         },
         {
           title: "แพ็คเกจเรียนระยะยาว",
-          href: "/tours/study?type=LONG",
+          href: "/tours/study?duration=LONG",
           items: [],
         },
       ],
