@@ -16,11 +16,13 @@ import { TourInfo } from "@/components/tour-info"
 import { generateStructuredData } from "./structured-data"
 
 interface TourStudySlugPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: TourStudySlugPageProps): Promise<Metadata> {
-  const tourData = initialPrograms.find((program) => program.id === params.slug)
+  const { slug: programId } = await params
+
+  const tourData = initialPrograms.find((program) => program.id === programId)
 
   if (!tourData) {
     return {
@@ -47,8 +49,10 @@ export async function generateMetadata({ params }: TourStudySlugPageProps): Prom
   }
 }
 
-export default function TourStudySlugPage({ params }: TourStudySlugPageProps) {
-  const tourData = initialPrograms.find((program) => program.id === params.slug)
+export default async function TourStudySlugPage({ params }: TourStudySlugPageProps) {
+  const { slug: programId } = await params
+
+  const tourData = initialPrograms.find((program) => program.id === programId)
   const universityData = initialUniversities.find((university) => university.aka === tourData?.university)
 
   if (!tourData || !universityData)
