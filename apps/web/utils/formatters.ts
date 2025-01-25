@@ -1,3 +1,7 @@
+export const add = (a: number, b: number) => {
+  return a + b
+}
+
 export const getGridClass = (layout: "grid" | "list") => {
   return layout === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
 }
