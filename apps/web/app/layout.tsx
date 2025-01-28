@@ -17,7 +17,15 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: ["ทัวร์ต่างประเทศ", "ทัวร์ส่วนตัว", "ทัวร์กรุ๊ป", "ทัวร์ส่วนตัว", "ทัวร์ส่วนตัว"],
+  keywords: [
+    "บริษัท แอดเวนเท็กซ์ อินเตอร์เนชั่นแนล กรุ๊ป จำกัด",
+    "บริษัท แอดเวนเท็กซ์ อินเตอร์เนชั่นแนล",
+    "บริษัท แอดเวนเท็กซ์",
+    "adventex",
+    "adventex education",
+    "Adventex",
+    "Adventex Education",
+  ],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
