@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
@@ -50,6 +51,10 @@ const socialLinks = [
     color: "#000000",
   },
 ]
+
+export const metadata: Metadata = {
+  title: "ติดต่อเรา",
+}
 
 export default function ContactPage() {
   return (

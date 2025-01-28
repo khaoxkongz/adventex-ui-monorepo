@@ -1,4 +1,10 @@
+import { Metadata } from "next"
+
 import BlurFade from "@workspace/ui/components/blur-fade"
+
+export const metadata: Metadata = {
+  title: "เกี่ยวกับเรา",
+}
 
 export default function AboutPage() {
   return (
